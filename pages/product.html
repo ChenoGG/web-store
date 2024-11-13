@@ -73,6 +73,17 @@
                 <p><a href="/pages/product.html">BRAND NAME</a></p> <!-- TODO: Check tag use outside vs. inside an <a> tag  -->
                 <p>64.90 €</p>
                 <p>Color: Coffee brown</p> <!-- strong -->
+
+                <select id="size" name="size" aria-label="Select size"> 
+                    <option value="" disabled selected>Choose a size</option>
+                    <option value="m">M</option>
+                    <option value="l">L</option>
+                    <option value="xl">XL</option>
+                    <option value="xxl">XXL</option>
+                </select>
+
+                <button type="button">Add to cart</button>
+                <button type="button">Favorite placeholder</button>
             </section>
         </article>
     </main>
@@ -80,6 +91,9 @@
     <aside>
         <section>
             <h3>Related Products</h3>
+            <a href="#">
+                See more similar products <i class="fa-solid fa-arrow-right"></i>
+            </a>
 
             <article>
                 <picture>
