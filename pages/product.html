@@ -67,7 +67,8 @@
                      <img src="../images/products/artisan_raiden_mid.webp" width="300" height="300">
                 </picture>
             </section>
-
+            
+            <!-- TODO: How big is too big for a section? -->
             <section> <!-- TODO: Is a header needed here? -->
                 <h2>ProductName</h2>
                 <p><a href="/pages/product.html">BRAND NAME</a></p> <!-- TODO: Check tag use outside vs. inside an <a> tag  -->
@@ -84,6 +85,73 @@
 
                 <button type="button">Add to cart</button>
                 <button type="button">Favorite placeholder</button>
+
+                <details>
+                    <summary>Material and maintenance</summary>
+                        <ul>
+                            <li>Some material goes here, 85% there, 15% there</li>
+                            <li>But there was also this other material</li>
+                            <li>Right, right.</li>
+                        </ul>
+                </details>
+
+                <details>
+                    <summary>Product details</summary>
+                        <p>
+                            You could have a mud pad, or you could have a glass pad, or..
+                            You could buy the Artisan Raiden which is the best of both worlds.
+                            Also why not get a Hien too while at it...
+                        </p>
+                </details>
+
+                <details>
+                    <summary>Size chart</summary>
+                    <!-- Size, Width, Length, Thickness -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Size</th>
+                                <th>Width</th>
+                                <th>Length</th>
+                                <th>Thickness</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>M</td>
+                                <td>31 cm</td>
+                                <td>24 cm</td>
+                                <td>3 mm</td>
+                            </tr>
+                            <tr>
+                                <td>L</td>
+                                <td>42 cm</td>
+                                <td>33 cm</td>
+                                <td>3 mm</td>
+                            </tr>
+                            <tr>
+                                <td>XL</td>
+                                <td>49 cm</td>
+                                <td>42 cm</td>
+                                <td>3 mm</td>
+                            </tr>
+                            <tr>
+                                <td>XXL</td>
+                                <td>50 cm</td>
+                                <td>49 cm</td>
+                                <td>3 mm</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+
+                <details>
+                    <summary>Reviews</summary> <!-- TODO: Shown with stars, not + icon -->
+                        <p>John Francis Jack Morrison</p>
+                        <p>2024-10-02</p> <!-- TODO: Time and accessibility? Should it be in a <p>? -->
+                        <p>STAR PLACEHOLDER</p>
+                        <p>Check your corners out there.</p>
+                </details>
             </section>
         </article>
     </main>
