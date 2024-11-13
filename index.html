@@ -16,7 +16,10 @@
     <header>
         <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/search -->
         <form role="search">
-            <input type="search" placeholder="Search here..." name="q" aria-label="Search through the site">
+            <label>
+                <input type="search" placeholder="Search here..." name="q" aria-label="Search through the site">
+                <i class="fa-solid fa-magnifying-glass"></i> <!-- TODO: Search icon inside -->
+            </label>
         </form>
         <nav>
             <ul>
@@ -37,21 +40,26 @@
 
     <main>
         <section>
-            <h1>BANNER PLACEHOLDER</h1>
-            <p>Ingress placeholder for when creativity spurs.</p>
+            <header> <!-- TODO: Check header placements  -->
+                <h1>BANNER PLACEHOLDER</h1>
+                <p>Ingress placeholder for when creativity spurs.</p>
+            </header>
             <a href="#">READ MORE</a>
         </section>
 
-        <section>
-            <h2>OUR MOST POPULAR PRODUCTS PLACEHOLDER</h2>
-            <p>Ingress placeholder for when creativity spurs.</p>
+        <section id="top-products">
+            <header>
+                <h2>OUR MOST POPULAR PRODUCTS PLACEHOLDER</h2>
+                <p>Ingress placeholder for when creativity spurs.</p>
+            </header>
             <button type="button">New Product</button>
             <button type="button">Special Price</button>
             <button type="button">Best Sellers</button>
 
             <article>
                 <picture>
-
+                    <!-- source media -->
+                    <img src="images/products/artisan_raiden_mid.webp" width="300" height="300">
                 </picture>
                 <a href="#"><h3>Product name</h3></a>
                 <p>99.90 €</p>
@@ -61,7 +69,7 @@
 
             <article>
                 <picture>
-                    
+                    <img src="images/products/artisan_raiden_mid.webp" width="300" height="300">
                 </picture>
                 <a href="#"><h3>Product name</h3></a>
                 <p>99.90 €</p>
@@ -71,7 +79,7 @@
 
             <article>
                 <picture>
-                    
+                    <img src="images/products/artisan_raiden_mid.webp" width="300" height="300">
                 </picture>
                 <a href="#"><h3>Product name</h3></a>
                 <p>99.90 €</p>
@@ -81,7 +89,7 @@
 
             <article>
                 <picture>
-                    
+                    <img src="images/products/artisan_raiden_mid.webp" width="300" height="300">
                 </picture>
                 <a href="#"><h3>Product name</h3></a>
                 <p>99.90 €</p>
@@ -91,7 +99,7 @@
 
             <article>
                 <picture>
-                    
+                    <img src="images/products/artisan_raiden_mid.webp" width="300" height="300">
                 </picture>
                 <a href="#"><h3>Product name</h3></a>
                 <p>99.90 €</p>
@@ -101,7 +109,7 @@
 
             <article>
                 <picture>
-                    
+                    <img src="images/products/artisan_raiden_mid.webp" width="300" height="300">
                 </picture>
                 <a href="#"><h3>Product name</h3></a>
                 <p>99.90 €</p>
@@ -110,27 +118,34 @@
             </article>
         </section>
 
-        <section>
-            <h2>OUR MOST POPULAR CATEGORIES PLACEHOLDER</h2>
-            <p>Ingress placeholder for when creativity spurs.</p>
+        <section id="top-categories">
+            <header>
+                <h2>OUR MOST POPULAR CATEGORIES PLACEHOLDER</h2>
+                <p>Ingress placeholder for when creativity spurs.</p>
+            </header>
 
             <article>
+                <img src="https://picsum.photos/400?blur">
                 <a href="#"><h3>Gaming Mice</h3></a>
             </article>
 
             <article>
+                <img src="https://picsum.photos/400?blur">
                 <a href="#"><h3>Mouse Pads</h3></a>
             </article>
 
             <article>
+                <img src="https://picsum.photos/400?blur">
                 <a href="#"><h3>Arm Sleeves</h3></a>
             </article>
 
             <article>
+                <img src="https://picsum.photos/400?blur">
                 <a href="#"><h3>Keyboards</h3></a>
             </article>
 
             <article>
+                <img src="https://picsum.photos/400?blur">
                 <a href="#"><h3>Monitors</h3></a>
             </article>
         </section>
@@ -139,28 +154,29 @@
             <h2>Reviews</h2>
 
             <article>
-                <img src="" alt="">
+                <!-- Image by <a href="https://pixabay.com/users/mrdidg-11821588/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5183427">Didier</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5183427">Pixabay</a> -->
+                <img src="images/reviews/cat_profile_picture.jpg" width="80" height="64" alt="">
                 <h3>Item to be reviewed</h3>
                 <p>STAR PLACEHOLDER</p>
                 <p>This is a user review to be written, I wonder if they like it or not?</p>
             </article>
 
             <article>
-                <img src="" alt="">
+                <img src="images/reviews/cat_profile_picture.jpg" width="80" height="64" alt="">
                 <h3>Item to be reviewed</h3>
                 <p>STAR PLACEHOLDER</p>
                 <p>This is a user review to be written, I wonder if they like it or not?</p>
             </article>
 
             <article>
-                <img src="" alt="">
+                <img src="images/reviews/cat_profile_picture.jpg" width="80" height="64" alt="">
                 <h3>Item to be reviewed</h3>
                 <p>STAR PLACEHOLDER</p>
                 <p>This is a user review to be written, I wonder if they like it or not?</p>
             </article>
 
             <article>
-                <img src="" alt="">
+                <img src="images/reviews/cat_profile_picture.jpg" width="80" height="64" alt="">
                 <h3>Item to be reviewed</h3>
                 <p>STAR PLACEHOLDER</p>
                 <p>This is a user review to be written, I wonder if they like it or not?</p>
@@ -168,7 +184,7 @@
         </section>
     </main>
 
-    <footer>
+    <footer id="skip-to-footer">
         <section>
             <h3>LOGO</h3> <!-- TODO: Placeholder "logo", change to picture later? -->
             <p>This is a slogan placeholder for when creativity spurs.</p>
@@ -203,6 +219,7 @@
                     <li><a href="#top-products">Products</a></li>
                     <li><a href="#top-categories">Categories</a></li>
                     <li><a href="#skip-to-footer">Contact Us</a></li>
+                    <li><a href="wcag-checklist.pdf" target="_blank" rel="noopener noreferrer">Tilgjengelighetserklæringen</a></li>
                 </ul>
             </nav>
         </section>
