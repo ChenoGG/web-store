@@ -1,0 +1,134 @@
+
+article {
+    background-color: pink;
+}
+
+/* fieldset {
+    border: 0;
+} */
+
+
+/* Skip-to-content button style from lesson */
+.skip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    ul {
+        list-style: none;
+
+        li {
+            a {
+                position: absolute;
+                left: -9999px;
+
+                &:focus {
+                    position: static;
+                    left: auto;
+                    margin: 1rem;
+                    padding: 0.5rem 1rem;
+                    background-color: #000;
+                    color: #fff;
+                    border-radius: 4px;
+                    z-index: 1000;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+/* TEST STUFF ABOVE */
+/* TEST STUFF ABOVE */
+
+/* Our most popular products - use GRID. One version for mobile (1 col), tablet, and desktop */
+
+:root {
+    --main-text: ;
+    --sub-text: ;
+}
+
+
+* {
+    box-sizing: border-box;
+    /* padding: 0;
+    margin: 0; */
+}
+
+/* MOBILE */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-container-row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+form {
+    margin: 1rem;
+
+    & label {
+        border: 1px solid black;
+        border-radius: 1rem;
+        padding: 0.5rem;
+        
+
+        & input {
+            border: 0;
+            width: 225px;
+        }
+    }
+}
+
+.fa-magnifying-glass { /* TODO: Check if using this class is okay, vs. making new */
+    padding: 0.5rem;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    & ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        & li {
+            padding: 0.5rem;
+
+            & a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+}
+
+#logo {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+
+/* MOBILE */
+
+
+/* TABLET */
+@media only screen and (min-width: 600px) { /* Breakpoints for now. Change later if needed. */
+
+}
+/* TABLET */
+
+
+/* DESKTOP */
+@media only screen and (min-width: 992px) {
+
+}
+/* DESKTOP */

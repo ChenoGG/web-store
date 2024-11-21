@@ -20,308 +20,310 @@
         </ul>
     </nav>
 
-    <header>
-        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/search -->
-        <form role="search">
-            <label>
-                <input type="search" placeholder="Search here..." name="q" aria-label="Search through the site">
-                <i class="fa-solid fa-magnifying-glass"></i> <!-- TODO: Search icon inside -->
-            </label>
-        </form>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../#top-products">Products</a></li>
-                <li><a href="../index.html">LOGO</a></li> <!-- TODO: Placeholder "logo", change to picture later? -->
-                <li><a href="../#top-categories">Categories</a></li>
-                <li><a href="#skip-to-footer">Contact Us</a></li>
-            </ul>
-
-            <ul>
-                <li><i class="fa-regular fa-user"></i></li>
-                <li><i class="fa-regular fa-heart"></i></li>
-                <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
+    <div class="flex-container">
         <header>
-            <h1>Shopping Cart</h1>
-        </header>
-
-        <section>
-            <h2>1. Your cart</h2>
-
-            <article>
-                <picture>
-                    <img src="../images/products/artisan_raiden_mid.webp" width="300" height="300">
-                </picture>
-                <a href="/pages/product.html"><h3>Product name</h3></a>
-                <p>99.90 €</p>
-                <p>Color: Coffee brown</p>
-
-                <label for="size-1">Size:</label> <!-- TODO: Look at id's being the same when duplicated -->
-                <select id="size-1" name="size">
-                    <option value="m">M</option>
-                    <option value="l">L</option>
-                    <option value="xl">XL</option>
-                    <option value="xxl">XXL</option>
-                </select>
-
-                <label for="counter-1">Amount:</label>
-                <input type="number" id="counter-1" name="counter" min="1" max="10" value="1">
-
-                <i class="fa-regular fa-heart"></i>
-                <i class="fa-solid fa-trash"></i>
-            </article>
-
-            <article>
-                <picture>
-                    <img src="../images/products/artisan_raiden_mid.webp" width="300" height="300">
-                </picture>
-                <a href="/pages/product.html"><h3>Product name</h3></a>
-                <p>99.90 €</p>
-                <p>Color: Coffee brown</p>
-
-                <label for="size-2">Size:</label>
-                <select id="size-2" name="size">
-                    <option value="m">M</option>
-                    <option value="l">L</option>
-                    <option value="xl">XL</option>
-                    <option value="xxl">XXL</option>
-                </select>
-
-                <label for="counter-2">Amount:</label>
-                <input type="number" id="counter-2" name="counter" min="1" max="10" value="1">
-
-                <i class="fa-regular fa-heart"></i>
-                <i class="fa-solid fa-trash"></i>
-            </article>
-
-            <article>
-                <picture>
-                    <img src="../images/products/artisan_raiden_mid.webp" width="300" height="300">
-                </picture>
-                <a href="/pages/product.html"><h3>Product name</h3></a>
-                <p>99.90 €</p>
-                <p>Color: Coffee brown</p>
-
-                <label for="size-3">Size:</label>
-                <select id="size-3" name="size">
-                    <option value="m">M</option>
-                    <option value="l">L</option>
-                    <option value="xl">XL</option>
-                    <option value="xxl">XXL</option>
-                </select>
-
-                <label for="counter-3">Amount:</label>
-                <input type="number" id="counter-3" name="counter" min="1" max="10" value="1">
-
-                <i class="fa-regular fa-heart"></i>
-                <i class="fa-solid fa-trash"></i>
-            </article>
-        </section>
-
-        <section>
-            <h2>2. Your information</h2>
-            
-            <form>
-                <fieldset>
-                    <legend>Delivery address:</legend>
-                    <label for="fname">First Name</label>
-                    <Input type="text" id="fname" name="fname" placeholder="Nora*">
-
-                    <label for="lname">Last Name</label>
-                    <Input type="text" id="lname" name="lname" placeholder="Nordman*">
-
-                    <label for="address">Street Address</label>
-                    <Input type="text" id="address" name="address" placeholder="BRA veien 4*">
-
-                    <label for="pcode">Postal Code</label>
-                    <Input type="number" id="pcode" name="pcode" placeholder="1752*">
-
-                    <label for="poffice">Post Office</label>
-                    <Input type="text" id="poffice" name="poffice" placeholder="Halden*">
-                </fieldset>
-
-                <fieldset>
-                    <legend>Contact information:</legend>
-                    <label for="mail">Email</label>
-                    <Input type="email" id="mail" name="mail" placeholder="Noranordman@hiof.no*">
-
-                    <label for="phone">Phone</label>
-                    <Input type="tel" id="phone" name="phone" placeholder="+4749***018">
-                </fieldset>
-                
-                <!-- TODO: Look at buttons later.. Complete purchase 1-4! -->
-                <input type="submit" value="Save">
-                <input type="button" value="Cancel">
+            <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/search -->
+            <form role="search">
+                <label>
+                    <input type="search" placeholder="Search here..." name="q" aria-label="Search through the site">
+                    <i class="fa-solid fa-magnifying-glass"></i> <!-- TODO: Search icon inside -->
+                </label>
             </form>
-        </section>
-
-        <section>
-            <h2>3. Delivery</h2>
-            
-            <form> <!-- TODO: Real scuffed this one, check it out later, also remember Aria-describedby -->
-                <fieldset> <!-- TODO: check value and if need fieldset wrap -->
-                    <legend>Delivery options</legend>
-                    <input type="radio" id="home" name="delivery" value="home-delivery" aria-describedby="describe-1 work-days">
-                    <label for="home">
-                        Express home delivery
-                        <!-- TODO: Figure out aria -->
-                         <!-- <span aria-label="3-4 Working days">3-4 Working days</span> instead? -->
-                        <span>3-4 Working days</span>
-                        <span id="describe-1">
-                            Order weekdays before 08:00* for next working day delivery. 
-                            Delivered to your home before breakfast, Monday to Saturday. 
-                            *For delivery to postcodes 4000-7999, the delivery time is two working days,
-                             for postcodes 8000-9999, the delivery time is three working days.
-                        </span>
-                        <span>50€</span>
-                        <i class="fa-solid fa-truck"></i>
-                    </label>
-
-                    <input type="radio" id="point" name="delivery" value="point-delivery" aria-describedby="describe-2 work-days">
-                    <label for="point">
-                        Express package for delivery point
-                        <span>1-3 Working days</span>
-                        <span>50€</span>
-                        <i class="fa-solid fa-truck"></i>
-                    </label>
-                    <!-- <span id="describe-2"></span> -->
-
-                    <input type="radio" id="standard" name="delivery" value="standard-delivery" aria-describedby="describe-3 work-days">
-                    <label for="standard">
-                        Standard home delivery
-                        <span>4-7 Working days</span>
-                        <span id="describe-3">
-                            Delivered to your home before breakfast, Monday to Saturday within 4-7 working days.
-                        </span>
-                        <span>50€</span>
-                        <i class="fa-solid fa-truck"></i>
-                    </label>
-                </fieldset>
-            </form>
-        </section>
-
-        <section>
-            <h2>4. Payment</h2> <!-- TODO: Check later -->
-
-            <form>
-                <fieldset>
-                    <legend>Card payment <i class="fa-solid fa-credit-card"></i></legend>
-                    <label for="card">Card number</label>
-                    <input type="number" id="card" name="card" placeholder="342342****4435">
-
-                    <label for="expire">Expiration date</label>
-                    <input type="date" id="expire" name="expire" placeholder="mm/dd/yyyy">
-
-                    <label for="cvc">CVC/CVV</label>
-                    <input type="number" id="cvc" name="cvc" placeholder="CVC/CVV">
-
-                    <p>To pay incl. VAT:</p>
-                    <p>101,90 €</p>
-
-                    <input type="submit" value="Complete purchase">
-                </fieldset>
-
-                <fieldset>
-                    <legend>Terms & Newsletter</legend>
-                    <p>
-                        You hereby confirm that the information and documents you have
-                        given are correct and complete. The supplier reserves the right
-                        the right to terminate or terminate the contractual relationship if it exists
-                        incorrect or incomplete information.
-                    </p>
-                    <input type="checkbox" id="terms" name="terms">
-                    <label for="terms">Yes, I accept the terms.</label>
-
-                    <input type="checkbox" id="newsletter" name="newsletter">
-                    <label for="newsletter">Please send me newsletters!</label>
-
-                    <input type="checkbox" id="sms" name="sms">
-                    <label for="sms">I would like to receive text messages with offers and news.</label>
-                </fieldset>
-            </form>
-        </section>
-    </main>
-
-    <footer id="skip-to-footer">
-        <section>
-            <h3>LOGO</h3> <!-- TODO: Placeholder "logo", change to picture later? -->
-            <p>This is a slogan placeholder for when creativity spurs.</p>
-        </section>
-
-        <section>
-            <h3>Contact</h3>
-            <ul>
-                <li>
-                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-                    Address: N E W PB.Street 7, 0007 Aim
-                </li>   
-                <li>
-                    <i class="fa-solid fa-phone" aria-hidden="true"></i>
-                    Phone: 99 88 77 66
-                </li>
-                <li>
-                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-                    Email: dotclickers@gmail.com
-                </li>
-                <li>
-                    <i class="fa-solid fa-clock" aria-hidden="true"></i>
-                    Opening hours: Monday-Saturday 09:00-18:00
-                </li>
-            </ul>
-        </section>
-
-        <section>
-            <h3>Shortcuts</h3>
             <nav>
                 <ul>
+                    <li><a href="../index.html">Home</a></li>
                     <li><a href="../#top-products">Products</a></li>
+                    <li><a href="../index.html" id="logo">LOGO</a></li> <!-- TODO: Placeholder "logo", change to picture later? -->
                     <li><a href="../#top-categories">Categories</a></li>
                     <li><a href="#skip-to-footer">Contact Us</a></li>
-                    <li><a href="../wcag-checklist.pdf" target="_blank" rel="noopener noreferrer">Tilgjengelighetserklæringen</a></li>
+                </ul>
+
+                <ul class="flex-container-row">
+                    <li><i class="fa-regular fa-user"></i></li>
+                    <li><i class="fa-regular fa-heart"></i></li>
+                    <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 </ul>
             </nav>
-        </section>
+        </header>
 
-        <section>
-            <h3>Social Media</h3>
-            <nav>
+        <main>
+            <header>
+                <h1>Shopping Cart</h1>
+            </header>
+
+            <section>
+                <h2>1. Your cart</h2>
+
+                <article>
+                    <picture>
+                        <img src="../images/products/artisan_raiden_mid.webp" width="300" height="300">
+                    </picture>
+                    <a href="/pages/product.html"><h3>Product name</h3></a>
+                    <p>99.90 €</p>
+                    <p>Color: Coffee brown</p>
+
+                    <label for="size-1">Size:</label> <!-- TODO: Look at id's being the same when duplicated -->
+                    <select id="size-1" name="size">
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                        <option value="xl">XL</option>
+                        <option value="xxl">XXL</option>
+                    </select>
+
+                    <label for="counter-1">Amount:</label>
+                    <input type="number" id="counter-1" name="counter" min="1" max="10" value="1">
+
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-trash"></i>
+                </article>
+
+                <article>
+                    <picture>
+                        <img src="../images/products/artisan_raiden_mid.webp" width="300" height="300">
+                    </picture>
+                    <a href="/pages/product.html"><h3>Product name</h3></a>
+                    <p>99.90 €</p>
+                    <p>Color: Coffee brown</p>
+
+                    <label for="size-2">Size:</label>
+                    <select id="size-2" name="size">
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                        <option value="xl">XL</option>
+                        <option value="xxl">XXL</option>
+                    </select>
+
+                    <label for="counter-2">Amount:</label>
+                    <input type="number" id="counter-2" name="counter" min="1" max="10" value="1">
+
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-trash"></i>
+                </article>
+
+                <article>
+                    <picture>
+                        <img src="../images/products/artisan_raiden_mid.webp" width="300" height="300">
+                    </picture>
+                    <a href="/pages/product.html"><h3>Product name</h3></a>
+                    <p>99.90 €</p>
+                    <p>Color: Coffee brown</p>
+
+                    <label for="size-3">Size:</label>
+                    <select id="size-3" name="size">
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                        <option value="xl">XL</option>
+                        <option value="xxl">XXL</option>
+                    </select>
+
+                    <label for="counter-3">Amount:</label>
+                    <input type="number" id="counter-3" name="counter" min="1" max="10" value="1">
+
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-trash"></i>
+                </article>
+            </section>
+
+            <section>
+                <h2>2. Your information</h2>
+                
+                <form>
+                    <fieldset>
+                        <legend>Delivery address:</legend>
+                        <label for="fname">First Name</label>
+                        <Input type="text" id="fname" name="fname" placeholder="Nora*">
+
+                        <label for="lname">Last Name</label>
+                        <Input type="text" id="lname" name="lname" placeholder="Nordman*">
+
+                        <label for="address">Street Address</label>
+                        <Input type="text" id="address" name="address" placeholder="BRA veien 4*">
+
+                        <label for="pcode">Postal Code</label>
+                        <Input type="number" id="pcode" name="pcode" placeholder="1752*">
+
+                        <label for="poffice">Post Office</label>
+                        <Input type="text" id="poffice" name="poffice" placeholder="Halden*">
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Contact information:</legend>
+                        <label for="mail">Email</label>
+                        <Input type="email" id="mail" name="mail" placeholder="Noranordman@hiof.no*">
+
+                        <label for="phone">Phone</label>
+                        <Input type="tel" id="phone" name="phone" placeholder="+4749***018">
+                    </fieldset>
+                    
+                    <!-- TODO: Look at buttons later.. Complete purchase 1-4! -->
+                    <input type="submit" value="Save">
+                    <input type="button" value="Cancel">
+                </form>
+            </section>
+
+            <section>
+                <h2>3. Delivery</h2>
+                
+                <form> <!-- TODO: Real scuffed this one, check it out later, also remember Aria-describedby -->
+                    <fieldset> <!-- TODO: check value and if need fieldset wrap -->
+                        <legend>Delivery options</legend>
+                        <input type="radio" id="home" name="delivery" value="home-delivery" aria-describedby="describe-1 work-days">
+                        <label for="home">
+                            Express home delivery
+                            <!-- TODO: Figure out aria -->
+                            <!-- <span aria-label="3-4 Working days">3-4 Working days</span> instead? -->
+                            <span>3-4 Working days</span>
+                            <span id="describe-1">
+                                Order weekdays before 08:00* for next working day delivery. 
+                                Delivered to your home before breakfast, Monday to Saturday. 
+                                *For delivery to postcodes 4000-7999, the delivery time is two working days,
+                                for postcodes 8000-9999, the delivery time is three working days.
+                            </span>
+                            <span>50€</span>
+                            <i class="fa-solid fa-truck"></i>
+                        </label>
+
+                        <input type="radio" id="point" name="delivery" value="point-delivery" aria-describedby="describe-2 work-days">
+                        <label for="point">
+                            Express package for delivery point
+                            <span>1-3 Working days</span>
+                            <span>50€</span>
+                            <i class="fa-solid fa-truck"></i>
+                        </label>
+                        <!-- <span id="describe-2"></span> -->
+
+                        <input type="radio" id="standard" name="delivery" value="standard-delivery" aria-describedby="describe-3 work-days">
+                        <label for="standard">
+                            Standard home delivery
+                            <span>4-7 Working days</span>
+                            <span id="describe-3">
+                                Delivered to your home before breakfast, Monday to Saturday within 4-7 working days.
+                            </span>
+                            <span>50€</span>
+                            <i class="fa-solid fa-truck"></i>
+                        </label>
+                    </fieldset>
+                </form>
+            </section>
+
+            <section>
+                <h2>4. Payment</h2> <!-- TODO: Check later -->
+
+                <form>
+                    <fieldset>
+                        <legend>Card payment <i class="fa-solid fa-credit-card"></i></legend>
+                        <label for="card">Card number</label>
+                        <input type="number" id="card" name="card" placeholder="342342****4435">
+
+                        <label for="expire">Expiration date</label>
+                        <input type="date" id="expire" name="expire" placeholder="mm/dd/yyyy">
+
+                        <label for="cvc">CVC/CVV</label>
+                        <input type="number" id="cvc" name="cvc" placeholder="CVC/CVV">
+
+                        <p>To pay incl. VAT:</p>
+                        <p>101,90 €</p>
+
+                        <input type="submit" value="Complete purchase">
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Terms & Newsletter</legend>
+                        <p>
+                            You hereby confirm that the information and documents you have
+                            given are correct and complete. The supplier reserves the right
+                            the right to terminate or terminate the contractual relationship if it exists
+                            incorrect or incomplete information.
+                        </p>
+                        <input type="checkbox" id="terms" name="terms">
+                        <label for="terms">Yes, I accept the terms.</label>
+
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Please send me newsletters!</label>
+
+                        <input type="checkbox" id="sms" name="sms">
+                        <label for="sms">I would like to receive text messages with offers and news.</label>
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+
+        <footer id="skip-to-footer">
+            <section>
+                <h3>LOGO</h3> <!-- TODO: Placeholder "logo", change to picture later? -->
+                <p>This is a slogan placeholder for when creativity spurs.</p>
+            </section>
+
+            <section>
+                <h3>Contact</h3>
                 <ul>
                     <li>
-                        <!-- https://docs.fontawesome.com/web/dig-deeper/accessibility  -->
-                         <!-- https://owasp.org/www-community/attacks/Reverse_Tabnabbing -->
-                          <!-- The rel is probably overkill, but a certain Tom came to me in my dreams -->
-                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                            <span class="fa-sr-only">Visit our instagram</span>
-                        </a>
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                        Address: N E W PB.Street 7, 0007 Aim
+                    </li>   
+                    <li>
+                        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                        Phone: 99 88 77 66
                     </li>
                     <li>
-                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-brands fa-facebook" aria-hidden="true"></i>
-                            <span class="fa-sr-only">Visit our facebook</span>
-                        </a>
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        Email: dotclickers@gmail.com
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-                            <span class="fa-sr-only">Visit our linkedin</span>  
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-brands fa-pinterest" aria-hidden="true"></i>
-                            <span class="fa-sr-only">Visit our pinterest</span>
-                        </a>
+                        <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                        Opening hours: Monday-Saturday 09:00-18:00
                     </li>
                 </ul>
-            </nav>
-        </section>
-    </footer>
+            </section>
+
+            <section>
+                <h3>Shortcuts</h3>
+                <nav>
+                    <ul>
+                        <li><a href="../#top-products">Products</a></li>
+                        <li><a href="../#top-categories">Categories</a></li>
+                        <li><a href="#skip-to-footer">Contact Us</a></li>
+                        <li><a href="../wcag-checklist.pdf" target="_blank" rel="noopener noreferrer">Tilgjengelighetserklæringen</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <section>
+                <h3>Social Media</h3>
+                <nav>
+                    <ul>
+                        <li>
+                            <!-- https://docs.fontawesome.com/web/dig-deeper/accessibility  -->
+                            <!-- https://owasp.org/www-community/attacks/Reverse_Tabnabbing -->
+                            <!-- The rel is probably overkill, but a certain Tom came to me in my dreams -->
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                                <span class="fa-sr-only">Visit our instagram</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                                <span class="fa-sr-only">Visit our facebook</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                                <span class="fa-sr-only">Visit our linkedin</span>  
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-pinterest" aria-hidden="true"></i>
+                                <span class="fa-sr-only">Visit our pinterest</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+        </footer>
+    </div>
 
 </body>
 </html>
