@@ -1,7 +1,7 @@
 
-article {
+/* article {
     background-color: pink;
-}
+} */
 
 /* fieldset {
     border: 0;
@@ -41,7 +41,7 @@ article {
 /* TEST STUFF ABOVE */
 /* TEST STUFF ABOVE */
 
-/* Our most popular products - use GRID. One version for mobile (1 col), tablet, and desktop */
+/* Our most popular categories - use GRID. One version for mobile (1 col), tablet, and desktop */
 
 :root {
     --main-text: ;
@@ -145,6 +145,95 @@ img {
     text-decoration: none;
     padding: 0.8rem;
     border-radius: 1rem;
+}
+
+.button-product {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    padding: 0.8rem;
+    border-radius: 1rem;
+    border: 1px solid black;
+
+    &:hover {
+        background-color: rgb(48, 48, 48);
+        color: white;
+    }
+}
+
+.flex-container-product-card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+
+    & header {
+        padding-bottom: 2rem;
+        text-align: center;
+    }
+
+    & article {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+
+        & a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+    justify-items: center;
+}
+
+/* TODO: Centering text is tricky.. */
+.article-category-card {
+    position: relative;
+    a{
+        top: 0; /* https://developer.mozilla.org/en-US/docs/Web/CSS/top */
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 1rem;
+        text-decoration: none;
+        color: white;
+    }
+}
+
+/* TODO: This should be on a single row, and scrollable */
+.flex-container-review-card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: left;
+    width: 100%;
+
+    & h2 {
+        padding-left: 16px;
+    }
+    
+    & article {
+        padding: 1rem;
+        margin: 0.5rem;
+        border: 1px solid grey;
+
+        & img {
+            max-width: 150px;
+            border-radius: 2rem;
+        }
+
+    }
 }
 
 footer {
