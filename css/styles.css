@@ -60,7 +60,7 @@ article {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */ /* TODO: Figure out search bar centering */
 }
 
 .flex-container-row {
@@ -69,8 +69,8 @@ article {
     flex-direction: row;
 }
 
-form {
-    margin: 1rem;
+.form-search {
+    margin: 1rem; 
 
     & label {
         border: 1px solid black;
@@ -89,12 +89,12 @@ form {
     padding: 0.5rem;
 }
 
-nav {
+.nav-main {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    
+
     & ul {
         list-style: none;
         padding: 0;
@@ -111,11 +111,42 @@ nav {
     }
 }
 
+
 #logo {
     font-size: xx-large;
     font-weight: bold;
 }
 
+footer {
+
+    & ul {
+        list-style: none;
+        padding: 0;
+
+        & li {
+            padding: 0.5rem;
+
+            & a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+
+        & i {
+            padding-right: 1rem;
+        }
+    }
+}
+
+/* To fix "visual bug" */
+.icon-address-is-smaller {
+    margin-left: 4px;
+}
+
+.text-contact {
+    font-weight: bold;
+    padding-right: 0.5rem;
+}
 
 /* MOBILE */
 

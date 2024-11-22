@@ -23,13 +23,13 @@
     <div class="flex-container">
         <header>
             <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/search -->
-            <form role="search">
+            <form class="form-search" role="search">
                 <label>
                     <input type="search" placeholder="Search here..." name="q" aria-label="Search through the site">
                     <i class="fa-solid fa-magnifying-glass"></i> <!-- TODO: Search icon inside -->
                 </label>
             </form>
-            <nav>
+            <nav class="nav-main">
                 <ul>
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../#top-products">Products</a></li>
@@ -258,27 +258,27 @@
                 <h3>Contact</h3>
                 <ul>
                     <li>
-                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-                        Address: N E W PB.Street 7, 0007 Aim
+                        <i class="fa-solid fa-location-dot icon-address-is-smaller" aria-hidden="true"></i>
+                        <span class="text-contact">Address:</span> N E W PB.Street 7, 0007 Aim
                     </li>   
                     <li>
                         <i class="fa-solid fa-phone" aria-hidden="true"></i>
-                        Phone: 99 88 77 66
+                        <span class="text-contact">Phone:</span> 99 88 77 66
                     </li>
                     <li>
                         <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-                        Email: dotclickers@gmail.com
+                        <span class="text-contact">Email:</span> dotclickers@gmail.com
                     </li>
                     <li>
                         <i class="fa-solid fa-clock" aria-hidden="true"></i>
-                        Opening hours: Monday-Saturday 09:00-18:00
+                        <span class="text-contact">Opening hours:</span> Monday-Saturday 09:00-18:00
                     </li>
                 </ul>
             </section>
 
             <section>
                 <h3>Shortcuts</h3>
-                <nav>
+                <nav class="nav-footer">
                     <ul>
                         <li><a href="../#top-products">Products</a></li>
                         <li><a href="../#top-categories">Categories</a></li>
@@ -291,7 +291,7 @@
             <section>
                 <h3>Social Media</h3>
                 <nav>
-                    <ul>
+                    <ul class="flex-container-row">
                         <li>
                             <!-- https://docs.fontawesome.com/web/dig-deeper/accessibility  -->
                             <!-- https://owasp.org/www-community/attacks/Reverse_Tabnabbing -->
