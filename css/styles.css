@@ -117,6 +117,36 @@ article {
     font-weight: bold;
 }
 
+.banner {
+    position: relative;
+
+    header {
+        width: 50%;
+        height: 100%;
+        right: 5%; /* https://developer.mozilla.org/en-US/docs/Web/CSS/right TODO: check if another way, but this works for now */
+        position: absolute; /* TODO: Look at positions */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: end;
+        text-align: right;
+        gap: 1rem;
+    }
+}
+
+img {
+    border-radius: 1rem;
+}
+
+.button-banner {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    padding: 0.8rem;
+    border-radius: 1rem;
+}
+
 footer {
 
     & ul {
