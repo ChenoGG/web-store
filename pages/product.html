@@ -13,7 +13,6 @@
 </head>
 
 <body>
-
     <nav class="skip">
         <ul>
             <li><a href="#top-products">Skip to main content</a></li>
@@ -41,47 +40,55 @@
                 <ul class="flex-container-row">
                     <li><i class="fa-regular fa-user"></i></li>
                     <li><i class="fa-regular fa-heart"></i></li>
-                    <li><a href="/pages/checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 </ul>
             </nav>
 
-            <nav id="breadcrumb">
-                <ol>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../#top-categories">Category</a></li>
-                    <li><a href="product.html">ProductName</a></li>
+            <nav> <!-- TODO: Add aria label -->
+                <ol class="flex-container-row breadcrumbs">
+                    <li>
+                        <a href="../index.html">Home</a>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </li>
+                    <li>
+                        <a href="../#top-categories">Category</a>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </li>
+                    <li>
+                        <a href="product.html" class="text-bold">ProductName</a>
+                    </li>
                 </ol>
             </nav>
         </header>
 
         <main>
             <article>
-                <section>
-                    <picture> <!-- TODO: check picture tag vs. others  -->
+                <section class="grid-product">
+                    <picture class="grid-product-big"> <!-- TODO: check picture tag vs. others  -->
                         <!-- Source media -->
                         <img src="../images/products/artisan_raiden_mid.webp" width="600" height="600">
                     </picture>
 
-                    <picture>
+                    <picture class="grid-product-small">
                         <!-- Source media -->
                         <img src="../images/products/artisan_raiden_mid.webp" width="300" height="300">
                     </picture>
-                    <picture>
+                    <picture class="grid-product-small">
                         <!-- Source media -->
                         <img src="../images/products/artisan_raiden_mid.webp" width="300" height="300">
                     </picture>
-                    <picture>
+                    <picture class="grid-product-small">
                         <!-- Source media -->
                         <img src="../images/products/artisan_raiden_mid.webp" width="300" height="300">
                     </picture>
                 </section>
                 
                 <!-- TODO: How big is too big for a section? -->
-                <section> <!-- TODO: Is a header needed here? -->
+                <section class="product-page-card-style flex-container"> <!-- TODO: Is a header needed here? -->
                     <h2>ProductName</h2>
                     <p><a href="/pages/product.html">BRAND NAME</a></p> <!-- TODO: Check tag use outside vs. inside an <a> tag  -->
                     <p>64.90 €</p>
-                    <p>Color: Coffee brown</p> <!-- strong -->
+                    <p>Color: <span class="text-bold">Coffee brown</span></p> <!-- strong -->
 
                     <select id="size" name="size" aria-label="Select size"> 
                         <option value="" disabled selected>Choose a size</option>
@@ -91,29 +98,41 @@
                         <option value="xxl">XXL</option>
                     </select>
 
-                    <button type="button">Add to cart</button>
-                    <button type="button">Favorite placeholder</button>
+                    <!-- TODO: Not sure what else to try -->
+                    <div class="button-container">
+                        <button class="button-add-to-cart" type="button" aria-label="Add to cart">Add to cart</button>
+                        <button class="button-heart" type="button" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+                    </div>
 
-                    <details>
-                        <summary>Material and maintenance</summary>
-                            <ul>
-                                <li>Some material goes here, 85% there, 15% there</li>
-                                <li>But there was also this other material</li>
-                                <li>Right, right.</li>
-                            </ul>
+                    <details class="details margin-top">
+                        <summary class="air-container">
+                            Material and maintenance
+                            <i class="fa-solid fa-plus"></i>
+                        </summary>
+                        <ul>
+                            <li>Some material goes here, 85% there, 15% there</li>
+                            <li>But there was also this other material</li>
+                            <li>Right, right.</li>
+                        </ul>
                     </details>
 
-                    <details>
-                        <summary>Product details</summary>
-                            <p>
-                                You could have a mud pad, or you could have a glass pad, or..
-                                You could buy the Artisan Raiden which is the best of both worlds.
-                                Also why not get a Hien too while at it...
-                            </p>
+                    <details class="details">
+                        <summary class="air-container">
+                            Product details
+                            <i class="fa-solid fa-plus"></i>
+                        </summary>
+                        <p>
+                            You could have a mud pad, or you could have a glass pad, or..
+                            You could buy the Artisan Raiden which is the best of both worlds.
+                            Also why not get a Hien too while at it...
+                        </p>
                     </details>
 
-                    <details>
-                        <summary>Size chart</summary>
+                    <details class="details">
+                        <summary class="air-container">
+                            Size chart
+                            <i class="fa-solid fa-plus"></i>
+                        </summary>
                         <!-- Size, Width, Length, Thickness -->
                         <table>
                             <thead>
@@ -153,89 +172,170 @@
                         </table>
                     </details>
 
-                    <details>
-                        <summary>Reviews</summary> <!-- TODO: Shown with stars, not + icon -->
+                    <details class="details">
+                        <summary class="air-container" role="img" aria-label="4 out of 5 stars">
+                            Reviews <!-- TODO: Will these get read? Check later / aria hidden? -->
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            32
+                        </summary> <!-- TODO: Shown with stars, not + icon -->
+                        <div class="review-border">
                             <p>John Francis Jack Morrison</p>
                             <p>2024-10-02</p> <!-- TODO: Time and accessibility? Should it be in a <p>? -->
-                            <p>STAR PLACEHOLDER</p>
+                            <p>
+                                <span role="img" aria-label="3 out of 5 stars">  
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </span>
+                            </p>
                             <p>Check your corners out there.</p>
+                        </div>
                     </details>
                 </section>
             </article>
         </main>
 
         <aside>
-            <section>
+            <section class="flex-container-product-card"> <!-- slider -->
                 <h3>Related Products</h3>
                 <a href="#">
                     See more similar products <i class="fa-solid fa-arrow-right"></i>
                 </a>
-
-                <article>
-                    <picture>
+                <div class="slider-box">
+                <div class="slider-container">
+                <article class="slider-item">
+                    <picture class="block">
                         <!-- source media -->
                         <img src="../images/products/artisan_raiden_mid.webp" width="300" height="300">
                     </picture>
-                    <a href="/pages/product.html"><h3>Product name</h3></a>
-                    <p>99.90 €</p>
-                    <p>STAR PLACEHOLDER</p>
-                    <p>REVIEWS PLACEHOLDER</p>
+                    <a href="/pages/product.html">
+                        <h3 class="inline">Product name</h3>
+                    </a>
+                    <p class="inline">99.90 €</p>
+                    <p>
+                    <span role="img" aria-label="4 out of 5 stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </span>
+                    842 Reviews
+                    </p>
                 </article>
 
-                <article>
-                    <picture>
+                <article class="slider-item">
+                    <picture class="block">
                         <!-- source media -->
                         <img src="../images/products/artisan_raiden_mid.webp" width="300" height="300">
                     </picture>
-                    <a href="/pages/product.html"><h3>Product name</h3></a>
-                    <p>99.90 €</p>
-                    <p>STAR PLACEHOLDER</p>
-                    <p>REVIEWS PLACEHOLDER</p>
+                    <a href="/pages/product.html">
+                        <h3 class="inline">Product name</h3>
+                    </a>
+                    <p class="inline">99.90 €</p>
+                    <p>
+                    <span role="img" aria-label="4 out of 5 stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </span>
+                    842 Reviews
+                    </p>
                 </article>
 
-                <article>
-                    <picture>
+                <article class="slider-item">
+                    <picture class="block">
                         <!-- source media -->
                         <img src="../images/products/artisan_raiden_mid.webp" width="300" height="300">
                     </picture>
-                    <a href="/pages/product.html"><h3>Product name</h3></a>
-                    <p>99.90 €</p>
-                    <p>STAR PLACEHOLDER</p>
-                    <p>REVIEWS PLACEHOLDER</p>
+                    <a href="/pages/product.html">
+                        <h3 class="inline">Product name</h3>
+                    </a>
+                    <p class="inline">99.90 €</p>
+                    <p>
+                    <span role="img" aria-label="4 out of 5 stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </span>
+                    842 Reviews
+                    </p>
                 </article>
 
-                <article>
-                    <picture>
+                <article class="slider-item">
+                    <picture class="block">
                         <!-- source media -->
                         <img src="../images/products/artisan_raiden_mid.webp" width="300" height="300">
                     </picture>
-                    <a href="/pages/product.html"><h3>Product name</h3></a>
-                    <p>99.90 €</p>
-                    <p>STAR PLACEHOLDER</p>
-                    <p>REVIEWS PLACEHOLDER</p>
+                    <a href="/pages/product.html">
+                        <h3 class="inline">Product name</h3>
+                    </a>
+                    <p class="inline">99.90 €</p>
+                    <p>
+                    <span role="img" aria-label="4 out of 5 stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </span>
+                    842 Reviews
+                    </p>
                 </article>
 
-                <article>
-                    <picture>
+                <article class="slider-item">
+                    <picture class="block">
                         <!-- source media -->
                         <img src="../images/products/artisan_raiden_mid.webp" width="300" height="300">
                     </picture>
-                    <a href="/pages/product.html"><h3>Product name</h3></a>
-                    <p>99.90 €</p>
-                    <p>STAR PLACEHOLDER</p>
-                    <p>REVIEWS PLACEHOLDER</p>
+                    <a href="/pages/product.html">
+                        <h3 class="inline">Product name</h3>
+                    </a>
+                    <p class="inline">99.90 €</p>
+                    <p>
+                    <span role="img" aria-label="4 out of 5 stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </span>
+                    842 Reviews
+                    </p>
                 </article>
 
-                <article>
-                    <picture>
+                <article class="slider-item">
+                    <picture class="block">
                         <!-- source media -->
                         <img src="../images/products/artisan_raiden_mid.webp" width="300" height="300">
                     </picture>
-                    <a href="/pages/product.html"><h3>Product name</h3></a>
-                    <p>99.90 €</p>
-                    <p>STAR PLACEHOLDER</p>
-                    <p>REVIEWS PLACEHOLDER</p>
+                    <a href="/pages/product.html">
+                        <h3 class="inline">Product name</h3>
+                    </a>
+                    <p class="inline">99.90 €</p>
+                    <p>
+                    <span role="img" aria-label="4 out of 5 stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </span>
+                    842 Reviews
+                    </p>
                 </article>
+            </div>
+        </div>
             </section>
         </aside>
 
