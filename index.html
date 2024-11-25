@@ -20,7 +20,7 @@
     </nav>
 
     <div class="flex-container">
-        <header>
+        <header class="main-header">
             <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/search -->
             <form class="form-search" role="search">
                 <label>
@@ -36,8 +36,9 @@
                     <li><a href="#top-categories">Categories</a></li>
                     <li><a href="#skip-to-footer">Contact Us</a></li>
                 </ul>
-
-                <ul class="flex-container-row">
+            </nav>
+            <nav>
+                <ul class="nav-icons">
                     <li><i class="fa-regular fa-user"></i></li>
                     <li><i class="fa-regular fa-heart"></i></li>
                     <li><a href="/pages/checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
@@ -48,8 +49,8 @@
         <main>
             <section class="banner">
                 <header> <!-- TODO: Check header placements  -->
-                    <h1>Et harum quidem rerum facilis est et expedita distinctio.</h1>
-                    <p>Nam libero tempore, soluta nobis est eligendi optio eurnque nihil impedit quo minus id quood maxime placeat facere possimus</p>
+                    <h1>Have you heard the tales of KovaaK's?</h1>
+                    <p>Some say if you have enough perseverance, this entity might come from above and bless you with good aim.. but only to those who have devoted themselves and who have full belief that one day Nova will be theirs.</p>
                     <a href="#" class="button-banner">READ MORE</a>
                 </header>
                 <picture>
@@ -59,9 +60,9 @@
             </section>
 
             <section id="top-products" class="flex-container-product-card">
-                <header>
+                <header class="margin">
                     <h2>Our most popular products</h2> <!-- TODO: Heart icons on pictures -->
-                    <p>Ingress placeholder for when creativity spurs.</p>
+                    <p>The only things you need in life are mice, pads and frames.</p>
                     <a href="#" class="button-product">New Product</a>
                     <a href="#" class="button-product">Special Price</a>
                     <a href="#" class="button-product">Best Sellers</a>
@@ -70,10 +71,10 @@
                 <article>
                     <picture class="block">
                         <!-- source media -->
-                        <img src="images/products/artisan_raiden_mid.webp" width="300" height="300">
+                        <img src="images/products/artisan_raiden_mid.webp" alt="mousepad from artisan, the raiden mid in coffebrown color" width="300" height="300">
                     </picture>
                     <a href="/pages/product.html">
-                        <h3 class="inline">Product name</h3>
+                        <h3 class="inline">Artisan Raiden Mid</h3>
                     </a>
                     <p class="inline">99.90 €</p>
                     <p>
@@ -91,10 +92,10 @@
 
                 <article>
                     <picture class="block">
-                        <img src="images/products/artisan_raiden_mid.webp" width="300" height="300">
+                        <img src="images/products/artisan_hien_soft.webp" alt="mousepad from artisan, the hien soft in red color" width="300" height="300">
                     </picture>
                     <a href="/pages/product.html">
-                        <h3 class="inline">Product name</h3>
+                        <h3 class="inline">Artisan Hien Soft</h3>
                     </a>
                     <p class="inline">99.90 €</p>
                     <p>
@@ -111,10 +112,10 @@
 
                 <article>
                     <picture class="block">
-                        <img src="images/products/artisan_raiden_mid.webp" width="300" height="300">
+                        <img src="images/products/saturn_pro.webp" alt="mousepad from lethal gaming gear, the saturn pro in blue color" width="300" height="300">
                     </picture>
                     <a href="/pages/product.html">
-                        <h3 class="inline">Product name</h3>
+                        <h3 class="inline">Saturn Pro</h3>
                     </a>
                     <p class="inline">99.90 €</p>
                     <p>
@@ -131,10 +132,10 @@
 
                 <article>
                     <picture class="block">
-                        <img src="images/products/artisan_raiden_mid.webp" width="300" height="300">
+                        <img src="images/products/lamzu_maya_gray.webp" alt="gaming mouse from lamzu, the maya in gray color" width="300" height="300">
                     </picture>
                     <a href="/pages/product.html">
-                        <h3 class="inline">Product name</h3>
+                        <h3 class="inline">Lamzu Maya</h3>
                     </a>
                     <p class="inline">99.90 €</p>
                     <p>
@@ -151,10 +152,10 @@
 
                 <article>
                     <picture class="block">
-                        <img src="images/products/artisan_raiden_mid.webp" width="300" height="300">
+                        <img src="images/products/gwolves_hts_plus_4k.webp" alt="gaming mouse from g-wolves, the hts-plus in pink color" width="300" height="300">
                     </picture>
                     <a href="/pages/product.html">
-                        <h3 class="inline">Product name</h3>
+                        <h3 class="inline">G-wolves HTS Plus 4k</h3>
                     </a>
                     <p class="inline">99.90 €</p>
                     <p>
@@ -171,10 +172,10 @@
 
                 <article>
                     <picture class="block">
-                        <img src="images/products/artisan_raiden_mid.webp" width="300" height="300">
+                        <img src="images/products/hitscan_hyperlight.webp" alt="gaming mouse from hitscan, the hyperlight in white color" width="300" height="300">
                     </picture>
                     <a href="/pages/product.html">
-                        <h3 class="inline">Product name</h3>
+                        <h3 class="inline">Hitscan Hyperlight</h3>
                     </a>
                     <p class="inline">99.90 €</p>
                     <p>
@@ -222,65 +223,75 @@
                 </article>
             </section>
 
-            <section class="flex-container-review-card">
+            <!-- TODO: Slightly unsure how semantic it is to wrap a section in a section 
+                But I don't want the heading to be alone.. Sacrifices for using less divs
+            -->
+            <section> 
                 <h2>Reviews</h2>
+                <section class="slider-container"> <!-- flex-container-review-card -->
+                    <article class="slider-item">
+                        <!-- Image by <a href="https://pixabay.com/users/mrdidg-11821588/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5183427">Didier</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5183427">Pixabay</a> -->
+                        <img src="images/reviews/cat_profile_picture.jpg" width="80" height="64" alt="">
+                        <h3>Hitscan Hyperlight</h3>
+                        <span role="img" aria-label="3 out of 5 stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </span>
+                        <p>
+                            I have twenty different mice and a couple of pads.
+                            That is why once again I am buying another mouse. I just can't stop. I think I might need professional help, but there's just so many new releases...
+                            They never stop coming, I must keep buying!
+                        </p>
+                    </article>
 
-                <div class="slider-box">
-                    <div class="slider-container">
-                        <article class="slider-item">
-                            <!-- Image by <a href="https://pixabay.com/users/mrdidg-11821588/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5183427">Didier</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5183427">Pixabay</a> -->
-                            <img src="images/reviews/cat_profile_picture.jpg" width="80" height="64" alt="">
-                            <h3>Item to be reviewed</h3>
-                            <span role="img" aria-label="3 out of 5 stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </span>
-                            <p>This is a user review to be written, I wonder if they like it or not?</p>
-                        </article>
+                    <article class="slider-item">
+                        <img src="images/reviews/cat_profile_picture.jpg" width="80" height="64" alt="">
+                        <h3>The entire shop</h3>
+                        <span role="img" aria-label="3 out of 5 stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </span>
+                        <p>
+                            I'm a cat. You have a lot of mice, you say? Can I has? I really want some mice! MICE MICE MICE!!!
+                        </p>
+                    </article>
 
-                        <article class="slider-item">
-                            <img src="images/reviews/cat_profile_picture.jpg" width="80" height="64" alt="">
-                            <h3>Item to be reviewed</h3>
-                            <span role="img" aria-label="3 out of 5 stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </span>
-                            <p>This is a user review to be written, I wonder if they like it or not?</p>
-                        </article>
+                    <article class="slider-item">
+                        <img src="images/reviews/cat_profile_picture.jpg" width="80" height="64" alt="">
+                        <h3>Lamzu Maya</h3>
+                        <span role="img" aria-label="3 out of 5 stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </span>
+                        <p>
+                            I spilled milk all over this Maya and now it doesn't work. I must say that is pretty sloppy work from Lamzu once again.
+                            I can't believe they haven't made their products stupid-proof yet. How am I going to take proper care of my products?
+                            Are you telling me I need to take accountability for my actions? Nuh-uh.
+                        </p>
+                    </article>
 
-                        <article class="slider-item">
-                            <img src="images/reviews/cat_profile_picture.jpg" width="80" height="64" alt="">
-                            <h3>Item to be reviewed</h3>
-                            <span role="img" aria-label="3 out of 5 stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </span>
-                            <p>This is a user review to be written, I wonder if they like it or not?</p>
-                        </article>
-
-                        <article class="slider-item">
-                            <img src="images/reviews/cat_profile_picture.jpg" width="80" height="64" alt="">
-                            <h3>Item to be reviewed</h3>
-                            <span role="img" aria-label="3 out of 5 stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </span>
-                            <p>This is a user review to be written, I wonder if they like it or not?</p>
-                        </article>
-                    </div>
-                </div>
+                    <article class="slider-item">
+                        <img src="images/reviews/cat_profile_picture.jpg" width="80" height="64" alt="">
+                        <h3>Item to be reviewed</h3>
+                        <span role="img" aria-label="3 out of 5 stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </span>
+                        <p>This is a user review to be written, I wonder if they like it or not?</p>
+                    </article>
+                </section>
             </section>
         </main>
 
@@ -290,74 +301,76 @@
                 <p>This is a slogan placeholder for when creativity spurs.</p>
             </section>
 
-            <section>
-                <h3>Contact</h3>
-                <ul>
-                    <li>
-                        <i class="fa-solid fa-location-dot icon-address-is-smaller" aria-hidden="true"></i>
-                        <span class="text-contact">Address:</span> N E W PB.Street 7, 0007 Aim
-                    </li>   
-                    <li>
-                        <i class="fa-solid fa-phone" aria-hidden="true"></i>
-                        <span class="text-contact">Phone:</span> 99 88 77 66
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-                        <span class="text-contact">Email:</span> dotclickers@gmail.com
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-clock" aria-hidden="true"></i>
-                        <span class="text-contact">Opening hours:</span> Monday-Saturday 09:00-18:00
-                    </li>
-                </ul>
-            </section>
-
-            <section>
-                <h3>Shortcuts</h3>
-                <nav class="nav-footer">
+            <div class="footer-container">
+                <section>
+                    <h3>Contact</h3>
                     <ul>
-                        <li><a href="#top-products">Products</a></li>
-                        <li><a href="#top-categories">Categories</a></li>
-                        <li><a href="#skip-to-footer">Contact Us</a></li>
-                        <li><a href="wcag-checklist.pdf" target="_blank" rel="noopener noreferrer">Tilgjengelighetserklæringen</a></li>
+                        <li>
+                            <i class="fa-solid fa-location-dot icon-address-is-smaller" aria-hidden="true"></i>
+                            <span class="text-contact">Address:</span> N E W PB.Street 7, 0007 Aim
+                        </li>   
+                        <li>
+                            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                            <span class="text-contact">Phone:</span> 99 88 77 66
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                            <span class="text-contact">Email:</span> dotclickers@gmail.com
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                            <span class="text-contact">Opening hours:</span> Monday-Saturday 09:00-18:00
+                        </li>
                     </ul>
-                </nav>
-            </section>
+                </section>
 
-            <section>
-                <h3>Social Media</h3>
-                <nav>
-                    <ul class="flex-container-row">
-                        <li>
-                            <!-- https://docs.fontawesome.com/web/dig-deeper/accessibility  -->
-                            <!-- https://owasp.org/www-community/attacks/Reverse_Tabnabbing -->
-                            <!-- The rel is probably overkill, but a certain Tom came to me in my dreams -->
-                            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-                                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                                <span class="fa-sr-only">Visit our instagram</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
-                                <span class="fa-sr-only">Visit our facebook</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-                                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-                                <span class="fa-sr-only">Visit our linkedin</span>  
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer">
-                                <i class="fa-brands fa-pinterest" aria-hidden="true"></i>
-                                <span class="fa-sr-only">Visit our pinterest</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </section>
+                <section>
+                    <h3>Shortcuts</h3>
+                    <nav class="nav-footer">
+                        <ul>
+                            <li><a href="#top-products">Products</a></li>
+                            <li><a href="#top-categories">Categories</a></li>
+                            <li><a href="#skip-to-footer">Contact Us</a></li>
+                            <li><a href="wcag-checklist.pdf" target="_blank" rel="noopener noreferrer">Tilgjengelighetserklæringen</a></li>
+                        </ul>
+                    </nav>
+                </section>
+
+                <section>
+                    <h3>Social Media</h3>
+                    <nav>
+                        <ul class="flex-container-row">
+                            <li>
+                                <!-- https://docs.fontawesome.com/web/dig-deeper/accessibility  -->
+                                <!-- https://owasp.org/www-community/attacks/Reverse_Tabnabbing -->
+                                <!-- The rel is probably overkill, but a certain Tom came to me in my dreams -->
+                                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                                    <span class="fa-sr-only">Visit our instagram</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                                    <span class="fa-sr-only">Visit our facebook</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                                    <span class="fa-sr-only">Visit our linkedin</span>  
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-pinterest" aria-hidden="true"></i>
+                                    <span class="fa-sr-only">Visit our pinterest</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+            </div>
         </footer>
     </div>
 </body>
