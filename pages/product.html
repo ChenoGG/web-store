@@ -20,7 +20,7 @@
     </nav>
 
     <div class="flex-container">
-        <header>
+        <header class="main-header">
             <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/search -->
             <form class="form-search" role="search">
                 <label>
@@ -36,14 +36,17 @@
                     <li><a href="../#top-categories">Categories</a></li>
                     <li><a href="#skip-to-footer">Contact Us</a></li>
                 </ul>
-
-                <ul class="flex-container-row">
+            </nav>
+            <nav>
+                <ul class="nav-icons">
                     <li><i class="fa-regular fa-user"></i></li>
                     <li><i class="fa-regular fa-heart"></i></li>
                     <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 </ul>
             </nav>
+        </header>
 
+        <main>
             <nav> <!-- TODO: Add aria label -->
                 <ol class="flex-container-row breadcrumbs">
                     <li>
@@ -59,9 +62,7 @@
                     </li>
                 </ol>
             </nav>
-        </header>
 
-        <main>
             <article>
                 <section class="grid-product">
                     <picture class="grid-product-big"> <!-- TODO: check picture tag vs. others  -->
@@ -202,13 +203,14 @@
         </main>
 
         <aside>
-            <section class="flex-container-product-card"> <!-- slider -->
+            <section> <!-- Moved this from the section underneath to use less divs! -->
                 <h3>Related Products</h3>
                 <a href="#">
                     See more similar products <i class="fa-solid fa-arrow-right"></i>
                 </a>
-                <div class="slider-box">
-                <div class="slider-container">
+            </section>
+
+            <section class="slider-container"> 
                 <article class="slider-item">
                     <picture class="block">
                         <!-- source media -->
@@ -334,8 +336,6 @@
                     842 Reviews
                     </p>
                 </article>
-            </div>
-        </div>
             </section>
         </aside>
 
@@ -345,74 +345,76 @@
                 <p>This is a slogan placeholder for when creativity spurs.</p>
             </section>
 
-            <section>
-                <h3>Contact</h3>
-                <ul>
-                    <li>
-                        <i class="fa-solid fa-location-dot icon-address-is-smaller" aria-hidden="true"></i>
-                        <span class="text-contact">Address:</span> N E W PB.Street 7, 0007 Aim
-                    </li>   
-                    <li>
-                        <i class="fa-solid fa-phone" aria-hidden="true"></i>
-                        <span class="text-contact">Phone:</span> 99 88 77 66
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-                        <span class="text-contact">Email:</span> dotclickers@gmail.com
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-clock" aria-hidden="true"></i>
-                        <span class="text-contact">Opening hours:</span> Monday-Saturday 09:00-18:00
-                    </li>
-                </ul>
-            </section>
-
-            <section>
-                <h3>Shortcuts</h3>
-                <nav class="nav-footer">
+            <div class="footer-container">
+                <section>
+                    <h3>Contact</h3>
                     <ul>
-                        <li><a href="../#top-products">Products</a></li>
-                        <li><a href="../#top-categories">Categories</a></li>
-                        <li><a href="#skip-to-footer">Contact Us</a></li>
-                        <li><a href="../wcag-checklist.pdf" target="_blank" rel="noopener noreferrer">Tilgjengelighetserklæringen</a></li>
+                        <li>
+                            <i class="fa-solid fa-location-dot icon-address-is-smaller" aria-hidden="true"></i>
+                            <span class="text-contact">Address:</span> N E W PB.Street 7, 0007 Aim
+                        </li>   
+                        <li>
+                            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                            <span class="text-contact">Phone:</span> 99 88 77 66
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                            <span class="text-contact">Email:</span> dotclickers@gmail.com
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                            <span class="text-contact">Opening hours:</span> Monday-Saturday 09:00-18:00
+                        </li>
                     </ul>
-                </nav>
-            </section>
+                </section>
 
-            <section>
-                <h3>Social Media</h3>
-                <nav>
-                    <ul class="flex-container-row">
-                        <li>
-                            <!-- https://docs.fontawesome.com/web/dig-deeper/accessibility  -->
-                            <!-- https://owasp.org/www-community/attacks/Reverse_Tabnabbing -->
-                            <!-- The rel is probably overkill, but a certain Tom came to me in my dreams -->
-                            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-                                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                                <span class="fa-sr-only">Visit our instagram</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
-                                <span class="fa-sr-only">Visit our facebook</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-                                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-                                <span class="fa-sr-only">Visit our linkedin</span>  
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer">
-                                <i class="fa-brands fa-pinterest" aria-hidden="true"></i>
-                                <span class="fa-sr-only">Visit our pinterest</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </section>
+                <section>
+                    <h3>Shortcuts</h3>
+                    <nav class="nav-footer">
+                        <ul>
+                            <li><a href="#top-products">Products</a></li>
+                            <li><a href="#top-categories">Categories</a></li>
+                            <li><a href="#skip-to-footer">Contact Us</a></li>
+                            <li><a href="wcag-checklist.pdf" target="_blank" rel="noopener noreferrer">Tilgjengelighetserklæringen</a></li>
+                        </ul>
+                    </nav>
+                </section>
+
+                <section>
+                    <h3>Social Media</h3>
+                    <nav>
+                        <ul class="flex-container-row">
+                            <li>
+                                <!-- https://docs.fontawesome.com/web/dig-deeper/accessibility  -->
+                                <!-- https://owasp.org/www-community/attacks/Reverse_Tabnabbing -->
+                                <!-- The rel is probably overkill, but a certain Tom came to me in my dreams -->
+                                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                                    <span class="fa-sr-only">Visit our instagram</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                                    <span class="fa-sr-only">Visit our facebook</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                                    <span class="fa-sr-only">Visit our linkedin</span>  
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-pinterest" aria-hidden="true"></i>
+                                    <span class="fa-sr-only">Visit our pinterest</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+            </div>
         </footer>
     </div>
 
