@@ -60,6 +60,8 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    width: 100%;
+
     /* align-items: center; */ /* TODO: Figure out search bar centering */
 }
 
@@ -89,13 +91,18 @@
     padding: 0.5rem;
 }
 
-.nav-main {
+.main-header {
+    width: 100%;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
+}
 
+.nav-main {
     & ul {
         list-style: none;
         padding: 0;
@@ -112,8 +119,22 @@
     }
 }
 
+.nav-icons {
+    display: flex;
+    padding: 0;
+    gap: 1rem;
+
+    & li {
+        list-style: none;
+
+        & a {
+            color: black;
+        }
+    }
+}
+
 #logo {
-    font-size: xx-large;
+    font-size: xx-large;    
     font-weight: bold;
 }
 
@@ -156,13 +177,20 @@
         width: 50%;
         height: 100%;
         right: 5%; /* https://developer.mozilla.org/en-US/docs/Web/CSS/right TODO: check if another way, but this works for now */
-        position: absolute; /* TODO: Look at positions */
+        position: absolute; 
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: end;
         text-align: right;
         gap: 1rem;
+    }
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        aspect-ratio: 4/4; /* https://www.w3schools.com/howto/howto_css_aspect_ratio.asp */
     }
 }
 
@@ -196,6 +224,7 @@ img {
 }
 
 .flex-container-product-card {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -222,60 +251,50 @@ img {
     }
 }
 
-/* Slider from ChatGPT */
-/* Parent container for the slider */
-.slider-box {
-    width: 100%; 
-    max-width: 100%; 
-    overflow-x: auto; 
-    padding: 0 10px;
-    box-sizing: border-box;
-    margin-top: 20px; 
-    border: 1px solid #ddd; /* Optional: Add a border around the slider box */
+/* The slider section below is from Claude.AI - https://claude.ai/ */
+section.slider-container {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 20px;
+
+    /* Other than this h2, article, img. */
+    & h2 {
+        padding-left: 16px;
+    }
+    
+    & article {
+        padding: 1rem;
+        margin: 0.5rem;
+        border: 1px solid grey;
+        border-radius: 1rem;
+
+        & img {
+            max-width: 150px;
+            border-radius: 2rem;
+        }
+
+    }
 }
 
-/* Container for the slider */
-.slider-container {
-    display: flex; 
-    gap: 10px; 
-    padding: 10px 0; 
-}
-
-/* Parent container for the slider */
-.slider-box {
-    width: 100%; 
-    max-width: 100%; 
-    overflow-x: auto; 
-    padding: 0 10px;
-    box-sizing: border-box;
-    margin-top: 20px; 
-    border: 1px solid #ddd; /* Optional: Add a border around the slider box */
-}
-
-/* Container for the slider */
-.slider-container {
-    display: flex; 
-    gap: 10px; 
-    padding: 10px 0; 
-    width: 100%; 
-}
-
-/* For the individual slider items */
 .slider-item {
-    flex: 0 0 auto; /* Prevent items from growing or shrinking */
+    flex: 0 0 auto;
     width: 80%;
-    max-width: 300px; /* Limit the max width to ensure it doesn’t stretch too much */
-    box-sizing: border-box;
+    max-width: 289px;
     padding: 5px;
-    text-align: center;
+    text-align: left;
+    scroll-snap-align: start;
 }
 
-/* Make sure images inside are responsive */
 .slider-item img {
-    width: 100%; /* Ensure images are responsive */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
-
 
 .visually-hidden {
     position: absolute;
@@ -575,6 +594,7 @@ article.article-shop {
         padding: 1rem;
         margin: 0.5rem;
         border: 1px solid grey;
+        border-radius: 1rem;
 
         & img {
             max-width: 150px;
@@ -620,6 +640,10 @@ footer {
     color: grey;
 }
 
+.margin {
+    margin: 1rem;
+}
+
 /* MOBILE */
 
 
@@ -631,7 +655,65 @@ footer {
 
 
 /* DESKTOP */
+/* Desktop Layout Adjustments */
 @media only screen and (min-width: 992px) {
 
-}
+    body {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .main-header {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+
+        & ul {
+            display: flex;
+            gap: 1rem;
+        }
+    }
+
+    .banner {
+        & img {
+            aspect-ratio: 16/7;
+        }
+    }
+
+    .flex-container-product-card {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+
+        & header {
+            width: 100%;
+        }
+
+        & article {
+            width: calc(33.333% - 1rem); /* https://developer.mozilla.org/en-US/docs/Web/CSS/calc */
+
+            & img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 1rem; /* My pictures all have white backgrounds so you can't see it, woops! */
+            }
+        }
+    }
+
+    footer {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+} 
 /* DESKTOP */
