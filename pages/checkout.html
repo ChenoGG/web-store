@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="../fontawesome/css/solid.css">
     <link rel="stylesheet" href="../fontawesome/css/regular.css">
     <link rel="stylesheet" href="../fontawesome/css/brands.css">
@@ -26,23 +27,28 @@
             <form class="form-search" role="search">
                 <label>
                     <input type="search" placeholder="Search here..." name="q" aria-label="Search through the site">
-                    <i class="fa-solid fa-magnifying-glass"></i> <!-- TODO: Search icon inside -->
+                    <i class="fa-solid fa-magnifying-glass"></i>
                 </label>
             </form>
             <nav class="nav-main">
                 <ul>
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../#top-products">Products</a></li>
-                    <li><a href="../index.html" id="logo">LOGO</a></li> <!-- TODO: Placeholder "logo", change to picture later? -->
+                    <!-- Logo is made by myself -->
+                    <li>
+                        <a href="../index.html">
+                            <img class="logo" src="/images/banners/d-logo.jpeg" alt="small logo displaying the letter D, blue background with white lines shooting across">
+                        </a>
+                    </li>
                     <li><a href="../#top-categories">Categories</a></li>
                     <li><a href="#skip-to-footer">Contact Us</a></li>
                 </ul>
             </nav>
             <nav>
                 <ul class="nav-icons">
-                    <li><i class="fa-regular fa-user"></i></li>
-                    <li><i class="fa-regular fa-heart"></i></li>
-                    <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li><a href="#" aria-label="Go to your profile"><i class="fa-regular fa-user"></i></a></li>
+                    <li><a href="#" aria-label="Go to your wishlist"><i class="fa-regular fa-heart"></i></a></li>
+                    <li><a href="checkout.html" aria-label="Go to the checkout"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 </ul>
             </nav>
         </header>
@@ -61,21 +67,23 @@
                 <h1>Shopping Cart</h1>
             </header>
 
-            <form>
-                <section class="article-shop-border">
+            <form class="form-width">
+                <section class="article-shop-border flex-container">
                     <h2>1. Your cart</h2>
 
                     <article class="article-shop">
                         <picture>
-                            <img src="../images/products/artisan_raiden_mid.webp" width="300" height="300">
+                            <source media="(min-width: 992px)" srcset="../images/products/artisan_raiden_mid.jpg">
+                            <source media="(min-width: 768px)" srcset="../images/products/artisan_raiden_mid_medium.jpg">
+                            <img src="../images/products/artisan_raiden_mid_small.jpg" alt="mousepad from artisan, the raiden mid in coffebrown color" width="300" height="300">
                         </picture>
-                        <a href="/pages/product.html"><h3>Product name</h3></a>
+                        <a href="/pages/product.html"><h3>Artisan Raiden Mid</h3></a>
                         <p>99.90 €</p>
                         <p>Color: Coffee brown</p>
                         
                         <fieldset>
                             <legend class="visually-hidden">Size and amount options</legend>
-                            <label for="size-1">Size:</label> <!-- TODO: Look at id's being the same when duplicated -->
+                            <label for="size-1">Size:</label> 
                             <select id="size-1" name="size">
                                 <option value="m">M</option>
                                 <option value="l">L</option>
@@ -87,21 +95,25 @@
                             <input type="number" id="counter-1" name="counter" min="1" max="10" value="1">
                         </fieldset>
 
+                        <!-- Ideally would wanna wrap these and give them aria-labels -->
                         <i class="fa-regular fa-heart"></i>
                         <i class="fa-solid fa-trash"></i>
+
                     </article>
 
                     <article class="article-shop">
                         <picture>
-                            <img src="../images/products/artisan_raiden_mid.webp" width="300" height="300">
+                            <source media="(min-width: 992px)" srcset="../images/products/artisan_raiden_mid.jpg">
+                            <source media="(min-width: 768px)" srcset="../images/products/artisan_raiden_mid_medium.jpg">
+                            <img src="../images/products/artisan_raiden_mid_small.jpg" alt="mousepad from artisan, the raiden mid in coffebrown color" width="300" height="300">
                         </picture>
-                        <a href="/pages/product.html"><h3>Product name</h3></a>
+                        <a href="/pages/product.html"><h3>Artisan Raiden Mid</h3></a>
                         <p>99.90 €</p>
                         <p>Color: Coffee brown</p>
     
                         <fieldset>
                             <legend class="visually-hidden">Size and amount options</legend>
-                            <label for="size-2">Size:</label> <!-- TODO: Look at id's being the same when duplicated -->
+                            <label for="size-2">Size:</label>
                             <select id="size-2" name="size">
                                 <option value="m">M</option>
                                 <option value="l">L</option>
@@ -113,21 +125,24 @@
                             <input type="number" id="counter-2" name="counter" min="1" max="10" value="1">
                         </fieldset>
     
+                        <!-- Ideally would wanna wrap these and give them aria-labels -->
                         <i class="fa-regular fa-heart"></i>
                         <i class="fa-solid fa-trash"></i>
                     </article>
     
                     <article class="article-shop">
                         <picture>
-                            <img src="../images/products/artisan_raiden_mid.webp" width="300" height="300">
+                            <source media="(min-width: 992px)" srcset="../images/products/lamzu_maya_gray.jpg">
+                            <source media="(min-width: 768px)" srcset="../images/products/lamzu_maya_gray_medium.jpg">
+                            <img src="../images/products/lamzu_maya_gray_small.jpg" alt="gaming mouse from lamzu, the maya in gray color" width="300" height="300">
                         </picture>
-                        <a href="/pages/product.html"><h3>Product name</h3></a>
+                        <a href="/pages/product.html"><h3>Lamzu Maya</h3></a>
                         <p>99.90 €</p>
-                        <p>Color: Coffee brown</p>
+                        <p>Color: Grey</p>
     
                         <fieldset>
                             <legend class="visually-hidden">Size and amount options</legend>
-                            <label for="size-3">Size:</label> <!-- TODO: Look at id's being the same when duplicated -->
+                            <label for="size-3">Size:</label>
                             <select id="size-3" name="size">
                                 <option value="m">M</option>
                                 <option value="l">L</option>
@@ -139,6 +154,7 @@
                             <input type="number" id="counter-3" name="counter" min="1" max="10" value="1">
                         </fieldset>
     
+                        <!-- Ideally would wanna wrap these and give them aria-labels -->
                         <i class="fa-regular fa-heart"></i>
                         <i class="fa-solid fa-trash"></i>
                     </article>
@@ -149,101 +165,93 @@
 
                     <fieldset class="shop-form">
                         <legend class="text-bold">Delivery address:</legend>
-                        <label for="fname">First Name</label>
-                        <input type="text" id="fname" name="fname" placeholder="Nora*">
+                        <label class="shop-1" for="fname">First Name</label>
+                        <input class="shop-1" type="text" id="fname" name="fname" placeholder="Nora*" pattern="[A-Za-zæøåÆØÅ ]{2,50}" required>
 
-                        <label for="lname">Last Name</label>
-                        <input type="text" id="lname" name="lname" placeholder="Nordman*">
+                        <label class="shop-2" for="lname">Last Name</label>
+                        <input class="shop-2" type="text" id="lname" name="lname" placeholder="Nordman*" pattern="[A-Za-zæøåÆØÅ ]{2,50}" required>
 
-                        <label for="address">Street Address</label>
-                        <input type="text" id="address" name="address" placeholder="BRA veien 4*">
+                        <label class="shop-3" for="address">Street Address</label>
+                        <input class="shop-3" type="text" id="address" name="address" placeholder="BRA veien 4*" pattern="[A-Za-zæøåÆØÅ0-9 ]{2,50}" required>
 
-                        <label for="pcode">Postal Code</label>
-                        <input type="number" id="pcode" name="pcode" placeholder="1752*">
+                        <label class="shop-4" for="pcode">Postal Code</label>
+                        <input class="shop-4" type="number" id="pcode" name="pcode" placeholder="1752*" required>
 
-                        <label for="poffice">Post Office</label>
-                        <input type="text" id="poffice" name="poffice" placeholder="Halden*">
+                        <label class="shop-5" for="poffice">Post Office</label>
+                        <input class="shop-5" type="text" id="poffice" name="poffice" placeholder="Halden*" pattern="[A-Za-zæøåÆØÅ ]{2,20}" required>
                     </fieldset>
 
                     <fieldset class="shop-form">
                         <legend class="text-bold">Contact information:</legend>
-                        <label for="mail">Email</label>
-                        <input type="email" id="mail" name="mail" placeholder="Noranordman@hiof.no*">
+                        <label class="shop-6" for="mail">Email</label>
+                        <input class="shop-6" type="email" id="mail" name="mail" placeholder="Noranordman@hiof.no*" required>
 
-                        <label for="phone">Phone</label>
-                        <input type="tel" id="phone" name="phone" placeholder="+4749***018">
+                        <label class="shop-7" for="phone">Phone</label>
+                        <input class="shop-7" type="tel" id="phone" name="phone" placeholder="+4749***018" pattern="[0-9]{8,12}" required>
                     </fieldset>
                     
-                    <!-- TODO: Look at buttons later.. Complete purchase 1-4! -->
-                    <input type="submit" value="Save">
-                    <input type="button" value="Cancel">
+                    <!-- Button vs. link for cancel? -->
+                    <input class="submit-button block" type="button" value="Save information">
+                    <input class="cancel-button" type="button" value="Cancel">
                 </section>
 
                 <section class="article-shop-border">
                     <h2>3. Delivery</h2>
 
-                    <fieldset class="shop-form-delivery"> <!-- TODO: check value and if need fieldset wrap -->
+                    <fieldset class="shop-form-delivery">
                         <legend>Delivery options</legend>
                         
-                        <label class="border" for="home">
-                            <input type="radio" id="home" name="delivery" value="home-delivery" aria-describedby="describe-1 work-days">
-                            <p class="inline">
-                                <strong>Express home delivery</strong>
-                            </p>
-                            <!-- TODO: Figure out aria -->
-                            <!-- <span aria-label="3-4 Working days">3-4 Working days</span> instead? -->
-                            <p class="text-bold">3-4 Working days</p>
-                            <p>50€ <i class="fa-solid fa-truck"></i></p>
-                            <p>
+                        <label class="border icon-placement" for="home">
+                            <input type="radio" id="home" name="delivery" value="home-delivery">
+                            <strong>Express home delivery</strong>
+                            <span class="text-form-color block">3-4 Working days</span>
+                            <span class="price-placement block">5€ <i class="fa-solid fa-truck" aria-hidden="true"></i></span>
+                            <span class="block">
                                 Order weekdays before 08:00* for next working day delivery. 
                                 Delivered to your home before breakfast, Monday to Saturday. 
                                 *For delivery to postcodes 4000-7999, the delivery time is two working days,
                                 for postcodes 8000-9999, the delivery time is three working days.
-                            </p>
+                            </span>
                         </label>
 
-                        <label class="border" for="point">
-                            <input type="radio" id="point" name="delivery" value="point-delivery" aria-describedby="describe-2 work-days">
-                            <p class="inline">
-                                <strong>Express package for delivery point</strong>
-                            </p>
-                            <p class="text-bold">1-3 Working days</p>
-                            <p>50€ <i class="fa-solid fa-truck-fast"></i></p>
+                        <label class="border icon-placement" for="point">
+                            <input type="radio" id="point" name="delivery" value="point-delivery">
+                            <strong>Express package for delivery point</strong>
+                            <span class="text-form-color block">1-3 Working days</span>
+                            <span class="price-placement block">5€ <i class="fa-solid fa-truck-fast" aria-hidden="true"></i></span>
                         </label>
 
-                        <label class="border" for="standard">
-                            <input type="radio" id="standard" name="delivery" value="standard-delivery" aria-describedby="describe-3 work-days">
-                            <p class="inline">
-                                <strong>Standard home delivery</strong>
-                            </p>
-                            <p class="text-bold">4-7 Working days</p>
-                            <p>Free <i class="fa-solid fa-box"></i></p>
-                            <p>
+                        <label class="border icon-placement" for="standard">
+                            <input type="radio" id="standard" name="delivery" value="standard-delivery">
+                            <strong>Standard home delivery</strong>
+                            <span class="text-form-color block">4-7 Working days</span>
+                            <span class="price-placement block">Free <i class="fa-solid fa-box" aria-hidden="true"></i></span>
+                            <span class="block">
                                 Delivered to your home before breakfast, 
                                 monday to saturday within 4-7 working days.
-                            </p>
+                            </span>
                         </label>
                     </fieldset>
                 </section>
 
                 <section class="article-shop-border">
-                    <h2>4. Payment</h2> <!-- TODO: Check later -->
+                    <h2>4. Payment</h2> 
 
                     <fieldset class="shop-form">
                         <legend class="text-bold">Card payment <i class="fa-solid fa-credit-card"></i></legend>
-                        <label for="card">Card number</label>
-                        <input type="number" id="card" name="card" placeholder="342342****4435">
+                        <label class="pay-1" for="card">Card number</label>
+                        <input class="pay-1" type="number" id="card" name="card" placeholder="342342****4435" required>
 
-                        <label for="expire">Expiration date</label>
-                        <input type="date" id="expire" name="expire">
+                        <label class="pay-2" for="expire">Expiration date</label>
+                        <input class="pay-2" type="date" id="expire" name="expire" required>
 
-                        <label for="cvc">CVC/CVV</label>
-                        <input type="number" id="cvc" name="cvc" placeholder="CVC/CVV">
+                        <label class="pay-3" for="cvc">CVC/CVV</label>
+                        <input class="pay-3" type="number" id="cvc" name="cvc" placeholder="CVC/CVV" required>
 
-                        <p>To pay incl. VAT.</p>
-                        <p>101,90 €</p> <!-- TODO: Fix strong/size/bold -->
+                        <p class="pay-4">To pay incl. VAT.</p>
+                        <p class="pay-4">101,90 €</p>
 
-                        <input class="submit-button" type="submit" value="Complete purchase">
+                        <input class="submit-button pay-5" type="submit" value="Complete purchase">
                     </fieldset>
 
                     <fieldset>
@@ -255,7 +263,7 @@
                             incorrect or incomplete information.
                         </p>
                         <div class="shop-form-item"> <!-- TODO: Check if there is another way. I am using divs for now - I think divs are nice :) -->
-                            <input type="checkbox" id="terms" name="terms">
+                            <input type="checkbox" id="terms" name="terms" required>
                             <label for="terms">Yes, I accept the terms.</label>
                         </div>
                         <div class="shop-form-item">
@@ -271,9 +279,13 @@
             </form>
         </main>
 
+        <hr>
+
         <footer id="skip-to-footer">
             <section>
-                <h3>LOGO</h3> <!-- TODO: Placeholder "logo", change to picture later? -->
+                <a href="../index.html">
+                    <img class="logo" src="/images/banners/d-logo.jpeg" alt="small logo displaying the letter D, blue background with white lines shooting across">
+                </a>
                 <p>This is a slogan placeholder for when creativity spurs.</p>
             </section>
 
@@ -283,19 +295,19 @@
                     <ul>
                         <li>
                             <i class="fa-solid fa-location-dot icon-address-is-smaller" aria-hidden="true"></i>
-                            <span class="text-contact">Address:</span> N E W PB.Street 7, 0007 Aim
+                            <strong class="text-contact">Address:</strong> N E W PB.Street 7, 0007 Aim
                         </li>   
                         <li>
                             <i class="fa-solid fa-phone" aria-hidden="true"></i>
-                            <span class="text-contact">Phone:</span> 99 88 77 66
+                            <strong class="text-contact">Phone:</strong> 99 88 77 66
                         </li>
                         <li>
                             <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-                            <span class="text-contact">Email:</span> dotclickers@gmail.com
+                            <strong class="text-contact">Email:</strong> dotclickers@gmail.com
                         </li>
                         <li>
                             <i class="fa-solid fa-clock" aria-hidden="true"></i>
-                            <span class="text-contact">Opening hours:</span> Monday-Saturday 09:00-18:00
+                            <strong class="text-contact">Opening hours:</strong> Monday-Saturday 09:00-18:00
                         </li>
                     </ul>
                 </section>
