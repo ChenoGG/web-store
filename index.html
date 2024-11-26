@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="fontawesome/css/solid.css">
     <link rel="stylesheet" href="fontawesome/css/regular.css">
     <link rel="stylesheet" href="fontawesome/css/brands.css">
@@ -25,37 +26,44 @@
             <form class="form-search" role="search">
                 <label>
                     <input type="search" placeholder="Search here..." name="q" aria-label="Search through the site">
-                    <i class="fa-solid fa-magnifying-glass"></i> <!-- TODO: Search icon inside -->
+                    <i class="fa-solid fa-magnifying-glass"></i> 
                 </label>
             </form>
             <nav class="nav-main">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="#top-products">Products</a></li>
-                    <li><a href="index.html" id="logo">LOGO</a></li> <!-- TODO: Placeholder "logo", change to picture later? -->
+                    <!-- Logo is made by myself -->
+                    <li>
+                        <a href="index.html">
+                            <img class="logo" src="images/banners/d-logo.jpeg" alt="small logo displaying the letter D, blue background with white lines shooting across">
+                        </a>
+                    </li>
                     <li><a href="#top-categories">Categories</a></li>
                     <li><a href="#skip-to-footer">Contact Us</a></li>
                 </ul>
             </nav>
             <nav>
                 <ul class="nav-icons">
-                    <li><i class="fa-regular fa-user"></i></li>
-                    <li><i class="fa-regular fa-heart"></i></li>
-                    <li><a href="/pages/checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li><a href="#" aria-label="Go to your profile"><i class="fa-regular fa-user"></i></a></li>
+                    <li><a href="#" aria-label="Go to your wishlist"><i class="fa-regular fa-heart"></i></a></li>
+                    <li><a href="pages/checkout.html" aria-label="Go to the checkout"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 </ul>
             </nav>
         </header>
 
         <main>
             <section class="banner">
-                <header> <!-- TODO: Check header placements  -->
+                <header>
                     <h1>Have you heard the tales of KovaaK's?</h1>
                     <p>Some say if you have enough perseverance, this entity might come from above and bless you with good aim.. but only to those who have devoted themselves and who have full belief that one day Nova will be theirs.</p>
                     <a href="#" class="button-banner">READ MORE</a>
                 </header>
                 <picture>
                     <!-- source media -->
-                     <img src="https://picsum.photos/600?blur" alt="">
+                     <source media="(min-width: 992px)" srcset="https://picsum.photos/id/29/1280/560?blur"> <!-- the everest base camp trekking Rte, Khumjung -->
+                     <source media="(min-width: 768px)" srcset="https://picsum.photos/id/184/820/360?blur"> <!-- middle of the desert, at the twilight hour -->
+                     <img src="https://picsum.photos/id/235/600/260/?blur" alt="the everest base camp trekking Rte, Khumjung">  <!-- the langbathsee mountain lake -->
                 </picture>
             </section>
 
@@ -70,10 +78,11 @@
 
                 <article>
                     <picture class="block">
-                        <!-- source media -->
-                        <img src="images/products/artisan_raiden_mid.webp" alt="mousepad from artisan, the raiden mid in coffebrown color" width="300" height="300">
+                        <source media="(min-width: 992px)" srcset="images/products/artisan_raiden_mid.jpg">
+                        <source media="(min-width: 768px)" srcset="images/products/artisan_raiden_mid_medium.jpg">
+                        <img src="images/products/artisan_raiden_mid_small.jpg" alt="mousepad from artisan, the raiden mid in coffebrown color" width="300" height="300">
                     </picture>
-                    <a href="/pages/product.html">
+                    <a href="pages/product.html">
                         <h3 class="inline">Artisan Raiden Mid</h3>
                     </a>
                     <p class="inline">99.90 €</p>
@@ -92,9 +101,11 @@
 
                 <article>
                     <picture class="block">
-                        <img src="images/products/artisan_hien_soft.webp" alt="mousepad from artisan, the hien soft in red color" width="300" height="300">
+                        <source media="(min-width: 992px)" srcset="images/products/artisan_hien_soft.jpg">
+                        <source media="(min-width: 768px)" srcset="images/products/artisan_hien_soft_medium.jpg">
+                        <img src="images/products/artisan_hien_soft_small.jpg" alt="mousepad from artisan, the hien soft in red color" width="300" height="300">
                     </picture>
-                    <a href="/pages/product.html">
+                    <a href="pages/product.html">
                         <h3 class="inline">Artisan Hien Soft</h3>
                     </a>
                     <p class="inline">99.90 €</p>
@@ -112,9 +123,11 @@
 
                 <article>
                     <picture class="block">
-                        <img src="images/products/saturn_pro.webp" alt="mousepad from lethal gaming gear, the saturn pro in blue color" width="300" height="300">
+                        <source media="(min-width: 992px)" srcset="images/products/saturn_pro.jpg">
+                        <source media="(min-width: 768px)" srcset="images/products/saturn_pro_medium.jpg">
+                        <img src="images/products/saturn_pro_small.jpg" alt="mousepad from lethal gaming gear, the saturn pro in blue color" width="300" height="300">
                     </picture>
-                    <a href="/pages/product.html">
+                    <a href="pages/product.html">
                         <h3 class="inline">Saturn Pro</h3>
                     </a>
                     <p class="inline">99.90 €</p>
@@ -132,9 +145,11 @@
 
                 <article>
                     <picture class="block">
-                        <img src="images/products/lamzu_maya_gray.webp" alt="gaming mouse from lamzu, the maya in gray color" width="300" height="300">
+                        <source media="(min-width: 992px)" srcset="images/products/lamzu_maya_gray.jpg">
+                        <source media="(min-width: 768px)" srcset="images/products/lamzu_maya_gray_medium.jpg">
+                        <img src="images/products/lamzu_maya_gray_small.jpg" alt="gaming mouse from lamzu, the maya in gray color" width="300" height="300">
                     </picture>
-                    <a href="/pages/product.html">
+                    <a href="pages/product.html">
                         <h3 class="inline">Lamzu Maya</h3>
                     </a>
                     <p class="inline">99.90 €</p>
@@ -152,9 +167,11 @@
 
                 <article>
                     <picture class="block">
-                        <img src="images/products/gwolves_hts_plus_4k.webp" alt="gaming mouse from g-wolves, the hts-plus in pink color" width="300" height="300">
+                        <source media="(min-width: 992px)" srcset="images/products/gwolves_hts_plus_4k.jpg">
+                        <source media="(min-width: 768px)" srcset="images/products/gwolves_hts_plus_4k_medium.jpg">
+                        <img src="images/products/gwolves_hts_plus_4k_medium.jpg" alt="gaming mouse from g-wolves, the hts-plus in pink color" width="300" height="300">
                     </picture>
-                    <a href="/pages/product.html">
+                    <a href="pages/product.html">
                         <h3 class="inline">G-wolves HTS Plus 4k</h3>
                     </a>
                     <p class="inline">99.90 €</p>
@@ -172,9 +189,11 @@
 
                 <article>
                     <picture class="block">
-                        <img src="images/products/hitscan_hyperlight.webp" alt="gaming mouse from hitscan, the hyperlight in white color" width="300" height="300">
+                        <source media="(min-width: 992px)" srcset="images/products/hitscan_hyperlight.jpg">
+                        <source media="(min-width: 768px)" srcset="images/products/hitscan_hyperlight_medium.jpg">
+                        <img src="images/products/hitscan_hyperlight_small.jpg" alt="gaming mouse from hitscan, the hyperlight in white color" width="300" height="300">
                     </picture>
-                    <a href="/pages/product.html">
+                    <a href="pages/product.html">
                         <h3 class="inline">Hitscan Hyperlight</h3>
                     </a>
                     <p class="inline">99.90 €</p>
@@ -191,47 +210,71 @@
                 </article>
             </section>
 
-            <section id="top-categories" class="grid-container"> <!-- TODO: Check if these count as product cards-->
-                <header>
+            <section id="top-categories" class="grid-container"> 
+                <header class="grid-header">
                     <h2>Our most popular categories</h2>
                     <p>Ingress placeholder for when creativity spurs.</p>
                 </header>
-
-                <article class="article-category-card">
-                    <img src="https://picsum.photos/400?blur">
-                    <a href="/pages/product.html"><h3>Gaming Mice</h3></a>
+                
+                <article class="article-category-card grid-cat-1">
+                    <picture>
+                        <source media="(min-width: 992px)" srcset="">
+                        <source media="(min-width: 768px)" srcset="">
+                        <img src="images/banners/psp.jpeg" alt="">
+                    </picture>
+                    <a href="pages/product.html"><h3>Gaming Mice</h3></a>
                 </article>
 
-                <article class="article-category-card">
-                    <img src="https://picsum.photos/400?blur">
-                    <a href="/pages/product.html"><h3>Mouse Pads</h3></a>
+                <article class="article-category-card grid-cat-2">
+                    <picture>
+                        <source media="(min-width: 992px)" srcset="">
+                        <source media="(min-width: 768px)" srcset="">
+                        <img src="images/banners/ifrit-red.png" alt="">
+                    </picture>
+                    <a href="pages/product.html"><h3>Mouse Pads</h3></a>
                 </article>
 
-                <article class="article-category-card">
-                    <img src="https://picsum.photos/400?blur">
-                    <a href="/pages/product.html"><h3>Arm Sleeves</h3></a>
+                <article class="article-category-card grid-cat-3">
+                    <picture>
+                        <source media="(min-width: 992px)" srcset="">
+                        <source media="(min-width: 768px)" srcset="">
+                        <img src="images/banners/yellow-bird.jpeg" alt="">
+                    </picture>
+                    <a href="pages/product.html"><h3>Arm Sleeves</h3></a>
                 </article>
 
-                <article class="article-category-card">
-                    <img src="https://picsum.photos/400?blur">
-                    <a href="/pages/product.html"><h3>Keyboards</h3></a>
+                <article class="article-category-card grid-cat-4">
+                    <picture>
+                        <source media="(min-width: 992px)" srcset="">
+                        <source media="(min-width: 768px)" srcset="">
+                        <img src="images/banners/dc-wp.jpeg" alt="">
+                    </picture>
+                    <a href="pages/product.html"><h3>Keyboards</h3></a>
                 </article>
 
-                <article class="article-category-card">
-                    <img src="https://picsum.photos/400?blur">
-                    <a href="/pages/product.html"><h3>Monitors</h3></a>
+                <article class="article-category-card grid-cat-5">
+                    <picture>
+                        <source media="(min-width: 992px)" srcset="">
+                        <source media="(min-width: 768px)" srcset="">
+                        <img src="images/banners/head.jpeg" alt="">
+                    </picture>
+                    <a href="pages/product.html"><h3>Monitors</h3></a>
                 </article>
             </section>
 
-            <!-- TODO: Slightly unsure how semantic it is to wrap a section in a section 
-                But I don't want the heading to be alone.. Sacrifices for using less divs
+            <!-- TODO: Unsure how semantically correct it is to wrap a section in a section,
+                But I don't want the heading to be alone and I save 2 divs with this approach.
             -->
             <section> 
                 <h2>Reviews</h2>
-                <section class="slider-container"> <!-- flex-container-review-card -->
+                <section class="slider-container"> 
                     <article class="slider-item">
                         <!-- Image by <a href="https://pixabay.com/users/mrdidg-11821588/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5183427">Didier</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5183427">Pixabay</a> -->
-                        <img src="images/reviews/cat_profile_picture.jpg" width="80" height="64" alt="">
+                        <picture>
+                            <source media="(min-width: 992px)" srcset="images/reviews/cat_profile_picture.jpg">
+                            <source media="(min-width: 768px)" srcset="images/reviews/cat_profile_picture_medium.jpg">
+                            <img src="images/reviews/cat_profile_picture_small.jpg" alt="a thoughtful blonde cat, looking off into the distance">
+                        </picture>
                         <h3>Hitscan Hyperlight</h3>
                         <span role="img" aria-label="3 out of 5 stars">
                             <i class="fa-solid fa-star"></i>
@@ -248,7 +291,11 @@
                     </article>
 
                     <article class="slider-item">
-                        <img src="images/reviews/cat_profile_picture.jpg" width="80" height="64" alt="">
+                        <picture>
+                            <source media="(min-width: 992px)" srcset="images/reviews/cat_profile_picture.jpg">
+                            <source media="(min-width: 768px)" srcset="images/reviews/cat_profile_picture_medium.jpg">
+                            <img src="images/reviews/cat_profile_picture_small.jpg" alt="a thoughtful blonde cat, looking off into the distance">
+                        </picture>
                         <h3>The entire shop</h3>
                         <span role="img" aria-label="3 out of 5 stars">
                             <i class="fa-solid fa-star"></i>
@@ -263,7 +310,11 @@
                     </article>
 
                     <article class="slider-item">
-                        <img src="images/reviews/cat_profile_picture.jpg" width="80" height="64" alt="">
+                        <picture>
+                            <source media="(min-width: 992px)" srcset="images/reviews/cat_profile_picture.jpg">
+                            <source media="(min-width: 768px)" srcset="images/reviews/cat_profile_picture_medium.jpg">
+                            <img src="images/reviews/cat_profile_picture_small.jpg" alt="a thoughtful blonde cat, looking off into the distance">
+                        </picture>
                         <h3>Lamzu Maya</h3>
                         <span role="img" aria-label="3 out of 5 stars">
                             <i class="fa-solid fa-star"></i>
@@ -280,7 +331,11 @@
                     </article>
 
                     <article class="slider-item">
-                        <img src="images/reviews/cat_profile_picture.jpg" width="80" height="64" alt="">
+                        <picture>
+                            <source media="(min-width: 992px)" srcset="images/reviews/cat_profile_picture.jpg">
+                            <source media="(min-width: 768px)" srcset="images/reviews/cat_profile_picture_medium.jpg">
+                            <img src="images/reviews/cat_profile_picture_small.jpg" alt="a thoughtful blonde cat, looking off into the distance">
+                        </picture>
                         <h3>Item to be reviewed</h3>
                         <span role="img" aria-label="3 out of 5 stars">
                             <i class="fa-solid fa-star"></i>
@@ -295,9 +350,13 @@
             </section>
         </main>
 
+        <hr>
+
         <footer id="skip-to-footer">
             <section>
-                <h3>LOGO</h3> <!-- TODO: Placeholder "logo", change to picture later? -->
+                <a href="index.html">
+                    <img class="logo" src="images/banners/d-logo.jpeg" alt="small logo displaying the letter D, blue background with white lines shooting across">
+                </a>
                 <p>This is a slogan placeholder for when creativity spurs.</p>
             </section>
 
@@ -307,19 +366,19 @@
                     <ul>
                         <li>
                             <i class="fa-solid fa-location-dot icon-address-is-smaller" aria-hidden="true"></i>
-                            <span class="text-contact">Address:</span> N E W PB.Street 7, 0007 Aim
+                            <strong class="text-contact">Address:</strong> N E W PB.Street 7, 0007 Aim
                         </li>   
                         <li>
                             <i class="fa-solid fa-phone" aria-hidden="true"></i>
-                            <span class="text-contact">Phone:</span> 99 88 77 66
+                            <strong class="text-contact">Phone:</strong> 99 88 77 66
                         </li>
                         <li>
                             <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-                            <span class="text-contact">Email:</span> dotclickers@gmail.com
+                            <strong class="text-contact">Email:</strong> dotclickers@gmail.com
                         </li>
                         <li>
                             <i class="fa-solid fa-clock" aria-hidden="true"></i>
-                            <span class="text-contact">Opening hours:</span> Monday-Saturday 09:00-18:00
+                            <strong class="text-contact">Opening hours:</strong> Monday-Saturday 09:00-18:00
                         </li>
                     </ul>
                 </section>
