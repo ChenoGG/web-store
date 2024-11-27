@@ -4,6 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name ="keywords" content="Gaming, Peripherals, Mouse, Mousepad">
+    <meta name="description" content="High quality gaming peripherals. Never blame anything but yourself for lackluster aim after shopping here.">
+    <meta property="og:title" content="DotClickers - Gaming peripherals">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chenogg.github.io/web-store/">
+    <meta property="og:image" content="https://picsum.photos/200">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="fontawesome/css/solid.css">
     <link rel="stylesheet" href="fontawesome/css/regular.css">
@@ -53,19 +59,47 @@
         </header>
 
         <main>
-            <section class="banner">
-                <header>
-                    <h1>Have you heard the tales of KovaaK's?</h1>
-                    <p>Some say if you have enough perseverance, this entity might come from above and bless you with good aim.. but only to those who have devoted themselves and who have full belief that one day Nova will be theirs.</p>
-                    <a href="#" class="button-banner">READ MORE</a>
-                </header>
-                <picture>
-                    <!-- source media -->
-                     <source media="(min-width: 992px)" srcset="https://picsum.photos/id/29/1280/560?blur"> <!-- the everest base camp trekking Rte, Khumjung -->
-                     <source media="(min-width: 768px)" srcset="https://picsum.photos/id/184/820/360?blur"> <!-- middle of the desert, at the twilight hour -->
-                     <img src="https://picsum.photos/id/235/600/260/?blur" alt="the everest base camp trekking Rte, Khumjung">  <!-- the langbathsee mountain lake -->
-                </picture>
-            </section>
+            <div class="banner-container">
+                <section class="banner-section product-heart-placement">
+                    <picture>
+                        <source media="(min-width: 992px)" srcset="https://picsum.photos/id/29/1280/560?blur"> 
+                        <source media="(min-width: 768px)" srcset="https://picsum.photos/id/29/820/360?blur"> 
+                        <img src="https://picsum.photos/id/29/600/400/?blur" alt="the everest base camp trekking Rte, Khumjung">  
+                   </picture>
+                   <span class="banner-button-placement bb-left"><i class="fa-solid fa-arrow-left"></i></span>
+                   <span class="banner-button-placement bb-right"><i class="fa-solid fa-arrow-right"></i></span>
+                    <header class="banner-content bc-right">
+                        <h1>Have you heard the tales of KovaaK's?</h1>
+                        <p>Some say if you have enough perseverance, this entity might come from above and bless you with good aim.. but only to those who have devoted themselves.</p>
+                        <a href="#" class="button-banner">READ MORE</a>
+                    </header>
+                </section>
+<!--                 <section class="banner-section">
+                    <picture>
+                        <source media="(min-width: 992px)" srcset="https://picsum.photos/id/184/1280/560?blur"> 
+                        <source media="(min-width: 768px)" srcset="https://picsum.photos/id/184/820/360?blur"> 
+                        <img src="https://picsum.photos/id/184/600/260/?blur" alt="the middle of the desert, at the twilight hour">
+                   </picture>
+                    <header class="banner-content bc-left">
+                        <h1>Have you heard the tales of KovaaK's?</h1>
+                        <p>Some say if you have enough perseverance, this entity might come from above and bless you with good aim.. but only to those who have devoted themselves.</p>
+                        <a href="#" class="button-banner">READ MORE</a>
+                    </header>
+                </section>
+                <section class="banner-section">
+                    <picture>
+                        <source media="(min-width: 992px)" srcset="https://picsum.photos/id/235/1280/560?blur"> 
+                        <source media="(min-width: 768px)" srcset="https://picsum.photos/id/235/820/360?blur"> 
+                        <img src="https://picsum.photos/id/235/600/260/?blur" alt="the Langbathsee mountain lake"> 
+                   </picture>
+                    <header class="banner-content bc-left">
+                        <h1>Have you heard the tales of KovaaK's?</h1>
+                        <p>Some say if you have enough perseverance, this entity might come from above and bless you with good aim.. but only to those who have devoted themselves.</p>
+                        <a href="#" class="button-banner">READ MORE</a>
+                    </header>
+                </section> -->
+            </div>
+
 
             <section id="top-products" class="flex-container-product-card">
                 <header class="margin">
@@ -76,12 +110,13 @@
                     <a href="#" class="button-product">Best Sellers</a>
                 </header>
 
-                <article>
+                <article class="product-heart-placement">
                     <picture class="block">
                         <source media="(min-width: 992px)" srcset="images/products/artisan_raiden_mid.jpg">
                         <source media="(min-width: 768px)" srcset="images/products/artisan_raiden_mid_medium.jpg">
                         <img src="images/products/artisan_raiden_mid_small.jpg" alt="mousepad from artisan, the raiden mid in coffebrown color" width="300" height="300">
                     </picture>
+                    <span class="product-heart"><i class="fa-regular fa-heart"></i></span>
                     <a href="pages/product.html">
                         <h3 class="inline">Artisan Raiden Mid</h3>
                     </a>
@@ -99,12 +134,13 @@
                     </p> 
                 </article>
 
-                <article>
+                <article class="product-heart-placement">
                     <picture class="block">
                         <source media="(min-width: 992px)" srcset="images/products/artisan_hien_soft.jpg">
                         <source media="(min-width: 768px)" srcset="images/products/artisan_hien_soft_medium.jpg">
                         <img src="images/products/artisan_hien_soft_small.jpg" alt="mousepad from artisan, the hien soft in red color" width="300" height="300">
                     </picture>
+                    <span class="product-heart"><i class="fa-regular fa-heart"></i></span>
                     <a href="pages/product.html">
                         <h3 class="inline">Artisan Hien Soft</h3>
                     </a>
@@ -121,12 +157,13 @@
                     </p> 
                 </article>
 
-                <article>
+                <article class="product-heart-placement">
                     <picture class="block">
                         <source media="(min-width: 992px)" srcset="images/products/saturn_pro.jpg">
                         <source media="(min-width: 768px)" srcset="images/products/saturn_pro_medium.jpg">
                         <img src="images/products/saturn_pro_small.jpg" alt="mousepad from lethal gaming gear, the saturn pro in blue color" width="300" height="300">
                     </picture>
+                    <span class="product-heart"><i class="fa-regular fa-heart"></i></span>
                     <a href="pages/product.html">
                         <h3 class="inline">Saturn Pro</h3>
                     </a>
@@ -143,12 +180,13 @@
                     </p> 
                 </article>
 
-                <article>
+                <article class="product-heart-placement">
                     <picture class="block">
                         <source media="(min-width: 992px)" srcset="images/products/lamzu_maya_gray.jpg">
                         <source media="(min-width: 768px)" srcset="images/products/lamzu_maya_gray_medium.jpg">
                         <img src="images/products/lamzu_maya_gray_small.jpg" alt="gaming mouse from lamzu, the maya in gray color" width="300" height="300">
                     </picture>
+                    <span class="product-heart"><i class="fa-regular fa-heart"></i></span>
                     <a href="pages/product.html">
                         <h3 class="inline">Lamzu Maya</h3>
                     </a>
@@ -165,12 +203,13 @@
                     </p> 
                 </article>
 
-                <article>
+                <article class="product-heart-placement">
                     <picture class="block">
                         <source media="(min-width: 992px)" srcset="images/products/gwolves_hts_plus_4k.jpg">
                         <source media="(min-width: 768px)" srcset="images/products/gwolves_hts_plus_4k_medium.jpg">
                         <img src="images/products/gwolves_hts_plus_4k_medium.jpg" alt="gaming mouse from g-wolves, the hts-plus in pink color" width="300" height="300">
                     </picture>
+                    <span class="product-heart"><i class="fa-regular fa-heart"></i></span>
                     <a href="pages/product.html">
                         <h3 class="inline">G-wolves HTS Plus 4k</h3>
                     </a>
@@ -187,12 +226,13 @@
                     </p> 
                 </article>
 
-                <article>
+                <article class="product-heart-placement">
                     <picture class="block">
                         <source media="(min-width: 992px)" srcset="images/products/hitscan_hyperlight.jpg">
                         <source media="(min-width: 768px)" srcset="images/products/hitscan_hyperlight_medium.jpg">
                         <img src="images/products/hitscan_hyperlight_small.jpg" alt="gaming mouse from hitscan, the hyperlight in white color" width="300" height="300">
                     </picture>
+                    <span class="product-heart"><i class="fa-regular fa-heart"></i></span>
                     <a href="pages/product.html">
                         <h3 class="inline">Hitscan Hyperlight</h3>
                     </a>
