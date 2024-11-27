@@ -1,14 +1,18 @@
+:root {
+    --main-text: ;
+    --sub-text: ;
 
-/* article {
-    background-color: pink;
-} */
-
-/* fieldset {
-    border: 0;
-} */
+    --main-color: ;
+    --sub-color: ;
+    --button-color: ;
+}
 
 
-/* Skip-to-content button style from lesson */
+* {
+    box-sizing: border-box;
+}
+
+/* Skip-to-content button style, taken from lesson */
 .skip {
     position: absolute;
     top: 0;
@@ -38,22 +42,6 @@
     }
 }
 
-/* TEST STUFF ABOVE */
-/* TEST STUFF ABOVE */
-
-/* Our most popular categories - use GRID. One version for mobile (1 col), tablet, and desktop */
-
-:root {
-    --main-text: ;
-    --sub-text: ;
-}
-
-
-* {
-    box-sizing: border-box;
-    /* padding: 0;
-    margin: 0; */
-}
 
 /* MOBILE */
 .flex-container {
@@ -61,8 +49,6 @@
     flex-wrap: wrap;
     flex-direction: column;
     width: 100%;
-
-    /* align-items: center; */ /* TODO: Figure out search bar centering */
 }
 
 .flex-container-row {
@@ -87,7 +73,7 @@
     }
 }
 
-.fa-magnifying-glass { /* TODO: Check if using this class is okay, vs. making new */
+.fa-magnifying-glass {
     padding: 0.5rem;
 }
 
@@ -105,6 +91,7 @@
 .nav-main {
     & ul {
         list-style: none;
+        align-items: center;
         padding: 0;
         margin: 0;
 
@@ -133,9 +120,9 @@
     }
 }
 
-#logo {
-    font-size: xx-large;    
-    font-weight: bold;
+.logo {
+    width: auto;
+    height: auto;
 }
 
 .nav-back {
@@ -170,31 +157,9 @@
     text-align: left;
 }
 
-.banner {
-    position: relative;
-
-    header {
-        width: 50%;
-        height: 100%;
-        right: 5%; /* https://developer.mozilla.org/en-US/docs/Web/CSS/right TODO: check if another way, but this works for now */
-        position: absolute; 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: end;
-        text-align: right;
-        gap: 1rem;
-    }
-
-    & img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        aspect-ratio: 4/4; /* https://www.w3schools.com/howto/howto_css_aspect_ratio.asp */
-    }
-}
-
 img {
+    max-width: 100%;
+    height: auto;
     border-radius: 1rem;
 }
 
@@ -251,7 +216,7 @@ img {
     }
 }
 
-/* The slider section below is from Claude.AI - https://claude.ai/ */
+/* The sliders below is from Claude.AI - https://claude.ai/ */
 section.slider-container {
     display: flex;
     gap: 10px;
@@ -262,7 +227,7 @@ section.slider-container {
     -webkit-overflow-scrolling: touch;
     margin-top: 20px;
 
-    /* Other than this h2, article, img. */
+    /* Other than this h2, article, and img. */
     & h2 {
         padding-left: 16px;
     }
@@ -283,11 +248,16 @@ section.slider-container {
 
 .slider-item {
     flex: 0 0 auto;
-    width: 80%;
+    width: 100%; /* 80% */
     max-width: 289px;
     padding: 5px;
     text-align: left;
     scroll-snap-align: start;
+
+    & p, a {
+        text-decoration: none;
+        color: black;
+    }
 }
 
 .slider-item img {
@@ -296,16 +266,17 @@ section.slider-container {
     object-fit: cover;
 }
 
+/* https://www.a11yproject.com/posts/how-to-hide-content/
+    Hides element - but screen reader will still read
+*/
 .visually-hidden {
-    position: absolute;
-    width: 1px;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
     height: 1px;
-    padding: 0;
-    margin: -1px;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap; /* Prevent the element from taking up extra space */
-    border: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
   }
 
 fieldset {
@@ -323,10 +294,9 @@ section.article-shop-border {
 }
 
 article.article-shop {
-    width: 100%;
 
     & img {
-        width: 100%;
+        max-width: 100%; 
     }
 
     & a {
@@ -355,7 +325,7 @@ article.article-shop {
     }
 }
 
-.shop-form { /* TODO: Can't have this one 4. Payment - messes with shop-form-item */
+.shop-form { 
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -400,30 +370,25 @@ article.article-shop {
     margin: 1rem;
 }
 
-.submit-button { /* TODO: Padding doesn't work here, check why */
+.submit-button { /* TODO: Padding doesn't work here, check why.
+                    UPDATE: It does, probably specificity for the other button
+                */
     display: inline-block;
     background-color: rgb(75, 71, 71);
     color: white;
     text-decoration: none;
     border-style: none;
+    padding: 0.5rem;
+    width: 100%;
 }
 
-/* .shop-form-terms {
-    legend, p {
-        display: flex;
-        flex-direction: column;
-    }
-
-    input {
-        display: inline-block;
-        width: 10%;
-    }
-
-    label {
-        display: inline-block;
-        width: 90%;
-    }
-} */
+.cancel-button {
+    background: none;
+	border: none;
+	padding: 1rem;
+    width: 100%;
+    text-decoration: underline;
+}
 
 .grid-product {
     display: grid;
@@ -497,9 +462,7 @@ article.article-shop {
     display:inline; 
 }
 
-.details {
-    width: auto;
-    
+.details { 
     & summary {
         list-style: none;
         padding: 2rem;
@@ -578,7 +541,6 @@ article.article-shop {
     }
 }
 
-/* TODO: This should be on a single row, and scrollable */
 .flex-container-review-card {
     display: flex;
     flex-wrap: wrap;
@@ -604,6 +566,13 @@ article.article-shop {
     }
 }
 
+/* https://www.w3schools.com/howto/howto_css_style_hr.asp */
+hr {
+    width: 100%;
+    border: 1px solid grey;
+    margin-top: 4rem;
+}
+
 footer {
 
     & ul {
@@ -625,7 +594,54 @@ footer {
     }
 }
 
-/* To fix "visual bug" */
+.product-heart-placement {
+    position: relative;
+}
+
+.product-heart {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(192, 191, 191);
+    border-radius: 50%;
+
+    & i {
+        margin: 0.75rem;
+    }
+}
+
+.banner-button-placement {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(192, 191, 191);
+    border-radius: 50%;
+
+    & i {
+        margin: 0.75rem;
+    }
+}
+
+.bb-left {
+    top: 15rem;
+    left: 0.5rem;
+}
+
+.bb-right {
+    top: 15rem;
+    right: 0.5rem;
+}
+
+/* FIX: Prevent aside from gliding up into details
+    Not sure what changed to cause this
+*/
+aside {
+    width: 100%; 
+}
+
+/* FIX: "visual bug" */
 .icon-address-is-smaller {
     margin-left: 4px;
 }
@@ -635,7 +651,7 @@ footer {
     padding-right: 0.5rem;
 }
 
-.text-bold {
+.text-form-color {
     font-weight: bold;
     color: grey;
 }
@@ -644,18 +660,134 @@ footer {
     margin: 1rem;
 }
 
+span {
+    margin: 0.5rem;
+}
+
+legend {
+    font-weight: bold;
+}
+
+    /* Banner section below is from Claude.AI - https://claude.ai/ */
+
+/*     .banner-container {
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+    } */
+
+    .banner-section {
+        display: inline-block;
+        width: 100%;
+        max-width: 1200px;
+        position: relative;
+        margin-right: 1rem;
+        vertical-align: top;
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .banner-content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50%;
+        color: white;
+        /* 
+        https://developer.mozilla.org/en-US/docs/Web/CSS/white-space
+        Set this to normal so text wraps, since nowrap is on banner-container 
+        */
+        white-space: normal;
+    }
+
+    .bc-right {
+        text-align: right;
+        margin-right: 4rem;
+    }
+
+    .bc-left {
+        text-align: left;
+        margin-left: 4rem;
+    }
+
+    .banner-section:nth-child(1) .banner-content {
+        right: 0;
+    }
+
+    .banner-section:nth-child(2) .banner-content,
+    .banner-section:nth-child(3) .banner-content {
+        left: 0;
+    }
+
 /* MOBILE */
 
 
 /* TABLET */
-@media only screen and (min-width: 600px) { /* Breakpoints for now. Change later if needed. */
+@media only screen and (min-width: 768px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto auto;    
+        gap: 1rem;
 
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        } 
+      }
+
+    .grid-header {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+      
+    .grid-cat-1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .grid-cat-2 {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .grid-cat-3 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+
+    .grid-cat-4 {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        width: 100%;
+        height: 100%;
+    }
+
+    .grid-cat-5 {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
 }
 /* TABLET */
 
 
 /* DESKTOP */
-/* Desktop Layout Adjustments */
 @media only screen and (min-width: 992px) {
 
     body {
@@ -675,12 +807,6 @@ footer {
         & ul {
             display: flex;
             gap: 1rem;
-        }
-    }
-
-    .banner {
-        & img {
-            aspect-ratio: 16/7;
         }
     }
 
@@ -713,6 +839,278 @@ footer {
         width: 100%;
         display: flex;
         justify-content: space-between;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto 300px 200px 300px;
+        gap: 1rem;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        } 
+      }
+
+    .grid-header {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+      
+    .grid-cat-1 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .grid-cat-2 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .grid-cat-3 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
+
+    .grid-cat-4 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 5;
+        width: 100%;
+        height: 100%;
+    }
+
+    .grid-cat-5 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+
+    /* TODO: Would like to fix air inside the border */
+    .form-width {
+        width: 80%;
+        margin: 0 auto;
+
+        & section {
+            margin-right: 0;
+        }
+    }
+
+    .shop-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: 1rem;
+
+        & legend {
+            margin-top: 3rem;
+        }
+    }
+
+    .shop-1 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .shop-2 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .shop-3 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .shop-4 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .shop-5 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .shop-6 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2; 
+    }
+
+    .shop-7 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    /* https://stackoverflow.com/questions/7282236/placing-an-image-to-the-top-right-corner-css */
+    .icon-placement {
+        position: relative;
+
+        & .price-placement {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+        }
+    }
+
+    .pay-1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .pay-2 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .pay-3 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .pay-4 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .pay-5 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .shop-form-two {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr  ;
+        gap: 1rem;
+    }
+    
+
+    .flex-left-to-right {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    /* TODO: Smaller images seem to expand when details menu is used 
+        See below.
+    */
+    .product-and-details {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .grid-product {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 1rem;
+        height: 100%;
+        /* FIX: Setting a max height works, not sure if ideal, but works. */
+        max-height: 650px;
+    }
+    
+    .grid-product-small {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    /* 
+      https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-y 
+      
+      https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp
+      Could use this to hide scrollbar and keep functionality
+    */
+    .details {
+        max-height: 500px; 
+        overflow-y: auto; 
+    }  
+
+    /* Claude.AI - https://claude.ai/ 
+        The entirety of this grid is from Claude
+    */
+    .article-shop {
+        display: grid;
+        grid-template-areas:
+          "image title title"
+          "image price heart"
+          "image color actions"
+          "image size actions";
+        grid-template-columns: 1fr 2fr 1fr;
+        align-items: start;
+        padding: 2rem;
+      }
+      
+      .article-shop picture {
+        grid-area: image;
+      }
+      
+      .article-shop h3 {
+        grid-area: title;
+        margin: 0;
+      }
+      
+      .article-shop p:first-of-type {
+        grid-area: price;
+        margin: 0;
+      }
+      
+      .article-shop p:nth-of-type(2) {
+        grid-area: color;
+        margin: 0;
+      }
+      
+      .article-shop fieldset {
+        grid-area: size;
+        margin: 0;
+      }
+      
+      .article-shop .fa-heart {
+        grid-area: heart;
+        justify-self: end;
+        margin: 0;
+      }
+      
+      .article-shop .fa-trash {
+        grid-area: actions;
+        justify-self: end;
+        margin-left: 10px;
+        margin-top: 10px;
+      }
+
+      .product-heart:hover {
+        background-color: rgb(230, 113, 113);
     }
 
 } 
