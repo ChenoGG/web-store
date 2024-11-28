@@ -108,10 +108,6 @@ body {
             & a {
                 text-decoration: none;
                 color: var(--main-color);
-
-                &:hover {
-                    text-decoration: underline;
-                }
             }
 
         }
@@ -406,11 +402,6 @@ article.article-shop {
     border-style: none;
     padding: 0.5rem;
     width: 100%;
-
-    &:hover {
-        cursor: pointer;
-        text-decoration: underline;
-    }
 }
 
 .cancel-button {
@@ -419,12 +410,6 @@ article.article-shop {
 	padding: 1rem;
     width: 100%;
     text-decoration: none;
-
-    &:hover {
-        cursor: pointer;
-        text-decoration: underline;
-        font-weight: bold;
-    }
 }
 
 .grid-product {
@@ -673,7 +658,7 @@ aside {
 
 .text-form-color {
     font-weight: bold;
-    color: grey;
+    color: #666666;  /* contrast fix */
 }
 
 .margin {
@@ -723,6 +708,9 @@ legend {
         transform: translateY(-50%);
         width: 50%;
         color: var(--sub-color);
+        background-color: rgb(97, 97, 97);
+        border-radius: 5px;
+        padding: 1rem;  
         /* 
         https://developer.mozilla.org/en-US/docs/Web/CSS/white-space
         Set this to normal so text wraps, since nowrap is on banner-container 
@@ -838,6 +826,13 @@ legend {
         width: 100%;
         max-width: 1200px;
         margin: 0 auto;
+    }
+
+    nav {
+
+        & li:hover {
+            text-decoration: underline;
+        }
     }
 
     a:hover {
@@ -1205,6 +1200,23 @@ legend {
         right: 1rem;    
         position: fixed;
       }
+
+    .submit-button { 
+
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+
+    .cancel-button {
+
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    }
 
 } 
 /* DESKTOP */
