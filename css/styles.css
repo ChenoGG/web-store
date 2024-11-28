@@ -2,9 +2,9 @@
     --main-text: ;
     --sub-text: ;
 
-    --main-color: ;
-    --sub-color: ;
-    --button-color: ;
+    --main-color: black;
+    --sub-color: white;
+    --button-color: rgb(77, 77, 77);
 }
 
 
@@ -612,28 +612,6 @@ footer {
     }
 }
 
-.banner-button-placement {
-    position: absolute;
-    height: 40px;
-    width: 40px;
-    background-color: rgb(192, 191, 191);
-    border-radius: 50%;
-
-    & i {
-        margin: 0.75rem;
-    }
-}
-
-.bb-left {
-    top: 15rem;
-    left: 0.5rem;
-}
-
-.bb-right {
-    top: 15rem;
-    right: 0.5rem;
-}
-
 /* FIX: Prevent aside from gliding up into details
     Not sure what changed to cause this
 */
@@ -668,7 +646,7 @@ legend {
     font-weight: bold;
 }
 
-    /* Banner section below is from Claude.AI - https://claude.ai/ */
+    /* Banner (main banner) section below is from Claude.AI - https://claude.ai/ */
 
 /*     .banner-container {
         width: 100%;
@@ -677,25 +655,31 @@ legend {
     } */
 
     .banner-section {
-        display: inline-block;
+        display: block;
         width: 100%;
         max-width: 1200px;
         position: relative;
-        margin-right: 1rem;
-        vertical-align: top;
+        margin: 0 auto;
+        text-align: left;
+
 
         & img {
             width: 100%;
             height: auto;
+            object-fit: cover;
         }
+    }
+
+    .banner-section img {
+        width: 100%;
+        height: auto;
     }
 
     .banner-content {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        width: 50%;
-        color: white;
+        color: var(--sub-color);
         /* 
         https://developer.mozilla.org/en-US/docs/Web/CSS/white-space
         Set this to normal so text wraps, since nowrap is on banner-container 
@@ -809,6 +793,29 @@ legend {
             gap: 1rem;
         }
     }
+
+    /* Right and left "slider" buttons for the banner */
+/*     .banner-button-placement {
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        background-color: rgb(192, 191, 191);
+        border-radius: 50%;
+    
+        & i {
+            margin: 0.75rem;
+        }
+    }
+    
+    .bb-left {
+        top: 15rem;
+        left: 0.5rem;
+    }
+    
+    .bb-right {
+        top: 15rem;
+        right: 0.5rem;
+    } */
 
     .flex-container-product-card {
         flex-direction: row;
@@ -1057,9 +1064,7 @@ legend {
         overflow-y: auto; 
     }  
 
-    /* Claude.AI - https://claude.ai/ 
-        The entirety of this grid is from Claude
-    */
+    /* Claude.AI - https://claude.ai/ */
     .article-shop {
         display: grid;
         grid-template-areas:
