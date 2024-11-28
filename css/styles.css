@@ -149,6 +149,10 @@ body {
     & a {
         text-decoration: none;
         color: var(--main-color);
+
+        & span {
+            margin: 0;
+        }
     }
 
     & i {
