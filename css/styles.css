@@ -16,6 +16,7 @@
 
 body {
     font-family: var(--main-text);
+    margin: 1rem;
 }
 
 /* Skip-to-content button style, taken from lesson */
@@ -218,8 +219,12 @@ img {
 
     & article {
         width: 100%;
-        text-align: center;
+        text-align: left;
         padding: 1rem;
+
+        & span, h3 {
+            margin: 0;
+        }
 
         & a {
             text-decoration: center; 
@@ -273,6 +278,10 @@ section.slider-container {
     & p, a {
         text-decoration: none;
         color: var(--main-color);
+    }
+
+    & span {
+        margin: 0;
     }
 }
 
@@ -397,6 +406,11 @@ article.article-shop {
     border-style: none;
     padding: 0.5rem;
     width: 100%;
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
 }
 
 .cancel-button {
@@ -404,7 +418,13 @@ article.article-shop {
 	border: none;
 	padding: 1rem;
     width: 100%;
-    text-decoration: underline;
+    text-decoration: none;
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        font-weight: bold;
+    }
 }
 
 .grid-product {
@@ -449,6 +469,10 @@ article.article-shop {
     & i {
         padding: 0.5rem;
     }
+
+    &:hover {
+        color: var(--wishlist-color);
+    }
 }
 
 .product-page-card-style {
@@ -476,7 +500,7 @@ article.article-shop {
 }
 
 .inline {
-    display:inline; 
+    display: inline;
 }
 
 .details { 
@@ -725,6 +749,19 @@ legend {
         left: 0;
     }
 
+    /* https://www.freecodecamp.org/news/css-only-back-to-top-button/ */
+    /* How to put this to the right, hmm.. */
+    .top {
+        text-decoration: none;
+        color: var(--main-color);
+        background: var(--border-color);
+        padding: 0.5rem;
+        border-radius: 1rem;
+        text-align: center;
+        width: 110px;
+        bottom: 1rem;
+      }
+
 /* MOBILE */
 
 
@@ -748,6 +785,10 @@ legend {
         grid-column-end: 4;
         grid-row-start: 1;
         grid-row-end: 1;
+
+        & h2 {
+            margin-top: 4rem;
+        }
     }
       
     .grid-cat-1 {
@@ -1098,6 +1139,10 @@ legend {
         grid-template-columns: 1fr 2fr 1fr;
         align-items: start;
         padding: 2rem;
+
+        & h3:hover {
+            text-decoration: underline;
+        }
       }
       
       .article-shop picture {
@@ -1146,6 +1191,20 @@ legend {
         transform: scale(1.8);
         transition: all .5s ease-in-out;
     }
+
+    button:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    summary:hover {
+        cursor: pointer;    
+    }
+
+    .top {
+        right: 1rem;    
+        position: fixed;
+      }
 
 } 
 /* DESKTOP */
