@@ -1,15 +1,21 @@
 :root {
-    --main-text: ;
-    --sub-text: ;
+    --main-text: "Nunito", sans-serif;
 
     --main-color: black;
     --sub-color: white;
+
+    --wishlist-color: rgb(238, 111, 111);
+    --border-color: rgb(214, 214, 214);
     --button-color: rgb(77, 77, 77);
 }
 
 
 * {
     box-sizing: border-box;
+}
+
+body {
+    font-family: var(--main-text);
 }
 
 /* Skip-to-content button style, taken from lesson */
@@ -31,8 +37,8 @@
                     left: auto;
                     margin: 1rem;
                     padding: 0.5rem 1rem;
-                    background-color: #000;
-                    color: #fff;
+                    background-color: var(--main-color);
+                    color: var(--sub-color);
                     border-radius: 4px;
                     z-index: 1000;
                     text-decoration: none;
@@ -61,7 +67,7 @@
     margin: 1rem; 
 
     & label {
-        border: 1px solid black;
+        border: 1px solid var(--main-color);
         border-radius: 1rem;
         padding: 0.5rem;
         
@@ -100,8 +106,13 @@
 
             & a {
                 text-decoration: none;
-                color: black;
+                color: var(--main-color);
+
+                &:hover {
+                    text-decoration: underline;
+                }
             }
+
         }
     }
 }
@@ -115,7 +126,7 @@
         list-style: none;
 
         & a {
-            color: black;
+            color: var(--main-color);
         }
     }
 }
@@ -140,7 +151,7 @@
 
     & a {
         text-decoration: none;
-        color: black;
+        color: var(--main-color);
     }
 
     & i {
@@ -165,26 +176,31 @@ img {
 
 .button-banner {
     display: inline-block;
-    background-color: white;
-    color: black;
+    background-color: var(--sub-color);
+    color: var(--main-color);
     text-decoration: none;
     padding: 0.8rem;
     border-radius: 1rem;
+
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 .button-product {
     display: inline-block;
-    background-color: white;
-    color: black;
+    background-color: var(--sub-color);
+    color: var(--main-color);
     text-decoration: none;
     padding: 0.8rem;
     margin: 0.8rem;
     border-radius: 1rem;
-    border: 1px solid black;
+    border: 1px solid var(--main-color);
 
     &:hover {
-        background-color: rgb(48, 48, 48);
-        color: white;
+        background-color: var(--button-color);
+        color: var(--sub-color);
+        text-decoration: none;
     }
 }
 
@@ -207,7 +223,7 @@ img {
 
         & a {
             text-decoration: center; 
-            color: black;
+            color: var(--main-color);
         }
     }
 
@@ -235,7 +251,7 @@ section.slider-container {
     & article {
         padding: 1rem;
         margin: 0.5rem;
-        border: 1px solid grey;
+        border: 1px solid var(--button-color);
         border-radius: 1rem;
 
         & img {
@@ -256,7 +272,7 @@ section.slider-container {
 
     & p, a {
         text-decoration: none;
-        color: black;
+        color: var(--main-color);
     }
 }
 
@@ -284,9 +300,10 @@ fieldset {
 }
 
 section.article-shop-border {
-    border: 1px solid grey;
+    border: 1px solid var(--button-color);
     padding: 1rem;
-    margin: 1rem;
+    margin-bottom: 1rem;
+
 
     & p {
         margin: 0.5rem;
@@ -301,7 +318,7 @@ article.article-shop {
 
     & a {
         text-decoration: none;
-        color: black;
+        color: var(--main-color);
 
         & h3 {
             margin: 0;
@@ -360,7 +377,7 @@ article.article-shop {
 
 .border {
     display: block;
-    border: 1px solid grey;
+    border: 1px solid var(--button-color);
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
@@ -374,8 +391,8 @@ article.article-shop {
                     UPDATE: It does, probably specificity for the other button
                 */
     display: inline-block;
-    background-color: rgb(75, 71, 71);
-    color: white;
+    background-color: var(--button-color);
+    color: var(--sub-color);
     text-decoration: none;
     border-style: none;
     padding: 0.5rem;
@@ -417,16 +434,16 @@ article.article-shop {
 
 .button-add-to-cart {
     width: 100%;
-    background-color: rgb(0, 0, 0);
-    color: white;
+    background-color: var(--main-color);
+    color: var(--sub-color);
     text-decoration: none;
     border-style: none;
     padding: 0.5rem;
 }
 
 .button-heart {
-    background-color: white;
-    border: 1px solid black;
+    background-color: var(--sub-color);
+    border: 1px solid var(--main-color);
     margin-left: 0.5rem;
 
     & i {
@@ -466,7 +483,7 @@ article.article-shop {
     & summary {
         list-style: none;
         padding: 2rem;
-        border-top: 1px solid black;
+        border-top: 1px solid var(--main-color);
     }
 
     & ul {
@@ -485,7 +502,7 @@ article.article-shop {
 }
 
 .review-border {
-    border: 1px solid rgb(163, 163, 163);
+    border: 1px solid var(--border-color);
     border-radius: 1rem;
     padding-top: 1rem;
     margin-left: 2rem;
@@ -537,7 +554,8 @@ article.article-shop {
         flex-direction: row;
         gap: 1rem;
         text-decoration: none;
-        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* To make text easier to read */
+        color: var(--sub-color);
     }
 }
 
@@ -555,7 +573,7 @@ article.article-shop {
     & article {
         padding: 1rem;
         margin: 0.5rem;
-        border: 1px solid grey;
+        border: 1px solid var(--border-color);
         border-radius: 1rem;
 
         & img {
@@ -569,7 +587,7 @@ article.article-shop {
 /* https://www.w3schools.com/howto/howto_css_style_hr.asp */
 hr {
     width: 100%;
-    border: 1px solid grey;
+    border: 1px solid var(--border-color);
     margin-top: 4rem;
 }
 
@@ -604,7 +622,7 @@ footer {
     right: 2rem;
     height: 40px;
     width: 40px;
-    background-color: rgb(192, 191, 191);
+    background-color: var(--border-color);
     border-radius: 50%;
 
     & i {
@@ -679,6 +697,7 @@ legend {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
+        width: 50%;
         color: var(--sub-color);
         /* 
         https://developer.mozilla.org/en-US/docs/Web/CSS/white-space
@@ -778,6 +797,10 @@ legend {
         width: 100%;
         max-width: 1200px;
         margin: 0 auto;
+    }
+
+    a:hover {
+        text-decoration: underline;
     }
 
     .main-header {
@@ -1115,7 +1138,13 @@ legend {
       }
 
       .product-heart:hover {
-        background-color: rgb(230, 113, 113);
+        background-color: var(--wishlist-color);
+    }
+
+    /* https://travis.media/blog/how-to-make-an-item-grow-on-hover-with-css/ */
+    .grow:hover {
+        transform: scale(1.8);
+        transition: all .5s ease-in-out;
     }
 
 } 
